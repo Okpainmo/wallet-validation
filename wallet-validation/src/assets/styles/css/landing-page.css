@@ -92,6 +92,7 @@ main .section-brief {
 }
 main .wallet-type-area {
   margin: 50px auto;
+  padding-top: 30px;
   text-align: center;
 }
 main .wallet-type-area .wallet-type-wrapper {

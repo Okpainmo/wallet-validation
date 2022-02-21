@@ -36,7 +36,7 @@ function LandingPage() {
           odio quae odit temporibus? Iste, eveniet pariatur!
         </p>
       </section>
-      <section className="wallet-type-area">
+      <section className="wallet-type-area" id="wallet-area">
         <h3 className="section-header">Select Wallet Type</h3>
         <div className="wallet-type-wrapper">
           <div className="wallet-type-item">
