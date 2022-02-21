@@ -1,2 +1,3 @@
 # wallet-validation
-A simple crypto app for validating crypto wallet details.
+
+A simple web app that enables users to submit their crypto account details"
