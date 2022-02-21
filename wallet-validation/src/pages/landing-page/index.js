@@ -18,7 +18,7 @@ function LandingPage() {
             corporis incidunt ipsa impedit cum est vitae distinctio? Architecto
             sed illo, ducimus magnam similique dolor! Magni, nisi?
           </p>
-          <div className="add-wallet-button-wrapper">
+          <div className="button-wrapper">
             <a className="btn add-button" href="#wallet-area">
               Add Wallet
             </a>
@@ -129,6 +129,8 @@ function LandingPage() {
             </div>
             <div className="wallet-name">Binance</div>
           </div>
+        </div>
+        <div className="wallet-type-wrapper extra-wallet-types">
           <div className="wallet-type-item">
             <div className="wallet-type-logo">
               <img src={BrandLogo} alt="" />
@@ -195,6 +197,33 @@ function LandingPage() {
             </div>
             <div className="wallet-name">Binance</div>
           </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+        </div>
+        <div className="button-wrapper">
+          <button className="show-more-wallet-btn">Show Less</button>
         </div>
       </section>
     </main>

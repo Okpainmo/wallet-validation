@@ -32,43 +32,17 @@
   font-family: "Open Sans", sans-serif;
 }
 
-main .main-banner {
-  background-image: url(../../images/crypto-background.png);
-  min-height: calc(100vh - 70px);
-  background-color: rgba(255, 255, 255, 0.95);
-  background-blend-mode: overlay;
-}
-main .main-banner .text-section {
-  padding: 100px 50px 50px;
-  text-align: center;
-  color: var(--custom-grey);
-}
-main .main-banner .text-section .bold-text {
-  font-size: 60px;
-  margin: 50px;
-}
-main .main-banner .text-section .platform-brief {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 20px;
-}
-main .main-banner .text-section .add-wallet-button-wrapper {
+main .button-wrapper {
   width: 80%;
   margin: 0 auto;
 }
-main .main-banner .text-section .add-wallet-button-wrapper .add-button {
+main .add-button, main .wallet-type-area .show-more-wallet-btn {
   background-color: var(--custom-blue);
   padding: 10px 50px;
   border-radius: 7px;
   font-size: 20px;
   margin: 50px;
   color: white;
-}
-main .more-details-area {
-  width: 100%;
-  text-align: center;
-  margin-top: 100px;
-  min-height: 300px;
 }
 main .section-header {
   color: var(--custom-grey);
@@ -90,6 +64,32 @@ main .section-brief {
   margin: 30px auto;
   font-size: 18px;
 }
+main .main-banner {
+  background-image: url(../../images/crypto-background.png);
+  min-height: calc(100vh - 70px);
+  background-color: rgba(255, 255, 255, 0.95);
+  background-blend-mode: overlay;
+}
+main .main-banner .text-section {
+  padding: 100px 50px 50px;
+  text-align: center;
+  color: var(--custom-grey);
+}
+main .main-banner .text-section .bold-text {
+  font-size: 60px;
+  margin: 50px;
+}
+main .main-banner .text-section .platform-brief {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+main .more-details-area {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  min-height: 300px;
+}
 main .wallet-type-area {
   margin: 50px auto;
   padding-top: 30px;
@@ -97,7 +97,7 @@ main .wallet-type-area {
 }
 main .wallet-type-area .wallet-type-wrapper {
   width: 100%;
-  padding: 50px;
+  padding: 20px 50px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -115,4 +115,8 @@ main .wallet-type-area .wallet-type-wrapper .wallet-type-item img {
 main .wallet-type-area .wallet-type-wrapper .wallet-type-item .wallet-name {
   margin: 15px 0 5px;
   color: var(--custom-grey);
+}
+main .wallet-type-area .show-more-wallet-btn {
+  width: 100%;
+  border: none;
 }
