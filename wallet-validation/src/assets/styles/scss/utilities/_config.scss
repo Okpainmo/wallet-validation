@@ -1,22 +1,32 @@
-%body {
-  background-color: rgba(0, 0, 0, 0.35);
-  background-blend-mode: overlay;
-  background-image: url('../../images/nb1.png');
-  background-repeat: no-repeat;
-  // overflow: hidden;
-  background-size: cover;
+.button-wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
-
-%background-extra {
-  content: '';
-  width: 250px;
-  border-radius: 130px;
-  z-index: 10;
-  background-color: rgba(194, 194, 194, 0.2);
-  display: block;
-  position: absolute;
+.add-button {
+  background-color: var(--custom-blue);
+  padding: 10px 50px;
+  border-radius: 7px;
+  font-size: 20px;
+  margin: 30px 0;
+  color: white;
 }
-
-:root {
-  --transition-all: all 0.75s ease;
+.section-header {
+  color: var(--custom-grey);
+  font-weight: bold;
+  font-size: 35px;
+  &:after {
+    background-color: var(--custom-blue);
+    content: '';
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    height: 3px;
+    border-radius: 20px;
+  }
+}
+.section-brief {
+  color: var(--custom-grey);
+  width: 65%;
+  margin: 30px auto;
+  font-size: 18px;
 }

@@ -25,7 +25,7 @@
   margin: 0 auto;
 }
 
-.add-button, main .wallet-type-area .show-more-wallet-btn {
+.add-button, .wallet-details-entry-section .form-area .submit-button {
   background-color: var(--custom-blue);
   padding: 10px 50px;
   border-radius: 7px;
@@ -56,44 +56,18 @@
   font-size: 18px;
 }
 
-main .main-banner {
-  background-image: url(../../images/crypto-background.png);
-  min-height: calc(100vh - 70px);
-  background-color: rgba(255, 255, 255, 0.95);
-  background-blend-mode: overlay;
-}
-main .main-banner .text-section {
-  padding: 100px 50px 50px;
-  text-align: center;
-  color: var(--custom-grey);
-}
-main .main-banner .text-section .bold-text {
-  font-size: 60px;
-  margin: 50px;
-}
-main .main-banner .text-section .platform-brief {
-  width: 80%;
-  margin: 0 auto;
-  font-size: 20px;
-}
-main .more-details-area {
+.wallet-details-entry-section {
   width: 100%;
-  text-align: center;
-  margin-top: 100px;
-  min-height: 300px;
-}
-main .wallet-type-area {
   margin: 50px auto;
-  padding-top: 30px;
-  text-align: center;
+  padding: 0 20px;
 }
-main .wallet-type-area .wallet-type-wrapper {
-  width: 100%;
-  padding: 20px 50px 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.wallet-details-entry-section .form-area {
+  width: 65%;
+  margin: 40px auto;
 }
-main .wallet-type-area .show-more-wallet-btn {
+.wallet-details-entry-section .form-area .mb-3 {
+  margin-bottom: 20px !important;
+}
+.wallet-details-entry-section .form-area .submit-button {
   width: 100%;
 }

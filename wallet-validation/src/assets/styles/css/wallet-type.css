@@ -1,0 +1,36 @@
+:root {
+  --custom-blue: #3877d3;
+  --custom-blue_opaque: rgba(16, 172, 245, 0.2);
+  --custom-white: white;
+  --custom-grey: #565656;
+}
+:root .facebook-blue {
+  color: #3b5998;
+}
+:root .twitter-blue {
+  color: #00aced;
+}
+:root .instagram {
+  color: #e95950;
+}
+:root .linkedin {
+  color: #007bb5;
+}
+:root .youtube {
+  color: #ff0000;
+}
+
+.wallet-type-item {
+  width: 80px;
+  margin: 15px;
+  padding: 20px 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px -10px var(--custom-grey);
+}
+.wallet-type-item img {
+  width: calc(100% - 10px);
+}
+.wallet-type-item .wallet-name {
+  margin: 15px 0 5px;
+  color: var(--custom-grey);
+}

@@ -1,14 +1,11 @@
 import React from 'react';
 import '../../assets/styles/css/landing-page.css';
-import Navbar from '../../components/Navbar';
-import BrandLogo from '../../assets/images/favicon.ico';
-
-// import MainBanner from './components/MainBanner';
+import WalletType from './components/WalletType';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
   return (
     <main>
-      <Navbar />
       <section className="main-banner">
         <div className="text-section">
           <span className="bold-text">Wallet Validation</span>
@@ -39,190 +36,16 @@ function LandingPage() {
       <section className="wallet-type-area" id="wallet-area">
         <h3 className="section-header">Select Wallet Type</h3>
         <div className="wallet-type-wrapper">
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
         </div>
         <div className="wallet-type-wrapper extra-wallet-types">
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
-          <div className="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src={BrandLogo} alt="" />
-            </div>
-            <div className="wallet-name">Binance</div>
-          </div>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>{' '}
         </div>
-        <div className="button-wrapper">
+        <div className="button-wrapper btn">
           <button className="show-more-wallet-btn">Show Less</button>
         </div>
       </section>

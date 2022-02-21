@@ -1,0 +1,38 @@
+:root {
+  --custom-blue: #3877d3;
+  --custom-blue_opaque: rgba(16, 172, 245, 0.2);
+  --custom-white: white;
+  --custom-grey: #565656;
+}
+:root .facebook-blue {
+  color: #3b5998;
+}
+:root .twitter-blue {
+  color: #00aced;
+}
+:root .instagram {
+  color: #e95950;
+}
+:root .linkedin {
+  color: #007bb5;
+}
+:root .youtube {
+  color: #ff0000;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+}
+footer .legal,
+footer .copy {
+  width: 80%;
+  margin: 20px auto;
+  color: var(--custom-grey);
+}
+footer .icon {
+  font-size: 20px;
+  margin: 10px 30px;
+  color: var(--custom-grey);
+}

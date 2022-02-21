@@ -1,0 +1,16 @@
+@use './utilities/colors';
+
+.wallet-type-item {
+  width: 80px;
+  margin: 15px;
+  padding: 20px 10px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px -10px var(--custom-grey);
+  img {
+    width: calc(100% - 10px);
+  }
+  .wallet-name {
+    margin: 15px 0 5px;
+    color: var(--custom-grey);
+  }
+}

@@ -1,40 +1,7 @@
 @use './utilities/colors';
-@use './utilities/google-fonts';
+@use './utilities/config';
 
 main {
-  .button-wrapper {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .add-button {
-    background-color: var(--custom-blue);
-    padding: 10px 50px;
-    border-radius: 7px;
-    font-size: 20px;
-    margin: 50px;
-    color: white;
-  }
-  .section-header {
-    color: var(--custom-grey);
-    font-weight: bold;
-    font-size: 35px;
-    &:after {
-      background-color: var(--custom-blue);
-      content: '';
-      display: block;
-      width: 100px;
-      margin: 0 auto;
-      height: 3px;
-      border-radius: 20px;
-    }
-  }
-  .section-brief {
-    color: var(--custom-grey);
-    width: 65%;
-    margin: 30px auto;
-    font-size: 18px;
-  }
-
   .main-banner {
     background-image: url(../../images/crypto-background.png);
     min-height: calc(100vh - 70px);
@@ -71,25 +38,10 @@ main {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      .wallet-type-item {
-        width: 80px;
-        margin: 15px;
-        padding: 20px 10px 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 20px -10px var(--custom-grey);
-        img {
-          width: calc(100% - 10px);
-        }
-        .wallet-name {
-          margin: 15px 0 5px;
-          color: var(--custom-grey);
-        }
-      }
     }
     .show-more-wallet-btn {
       @extend .add-button;
       width: 100%;
-      border: none;
     }
   }
 }

@@ -1,0 +1,19 @@
+@use './utilities/colors';
+@use './utilities/config';
+
+.wallet-details-entry-section {
+  width: 100%;
+  margin: 50px auto;
+  padding: 0 20px;
+  .form-area {
+    width: 65%;
+    margin: 40px auto;
+    .mb-3 {
+      margin-bottom: 20px !important;
+    }
+    .submit-button {
+      @extend .add-button;
+      width: 100%;
+    }
+  }
+}
