@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../assets/styles/css/landing-page.css';
 import Navbar from '../../components/Navbar';
+import BrandLogo from '../../assets/images/favicon.ico';
+
 // import MainBanner from './components/MainBanner';
 
 function LandingPage() {
@@ -17,7 +19,9 @@ function LandingPage() {
             sed illo, ducimus magnam similique dolor! Magni, nisi?
           </p>
           <div className="add-wallet-button-wrapper">
-            <button className="btn add-button">Add Wallet</button>
+            <a className="btn add-button" href="#wallet-area">
+              Add Wallet
+            </a>
           </div>
         </div>
       </section>
@@ -31,6 +35,167 @@ function LandingPage() {
           Exercitationem provident mollitia perferendis error vel deserunt totam
           odio quae odit temporibus? Iste, eveniet pariatur!
         </p>
+      </section>
+      <section className="wallet-type-area">
+        <h3 className="section-header">Select Wallet Type</h3>
+        <div className="wallet-type-wrapper">
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+          <div className="wallet-type-item">
+            <div className="wallet-type-logo">
+              <img src={BrandLogo} alt="" />
+            </div>
+            <div className="wallet-name">Binance</div>
+          </div>
+        </div>
       </section>
     </main>
   );
