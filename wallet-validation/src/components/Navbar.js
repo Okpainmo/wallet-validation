@@ -1,6 +1,7 @@
 import React from 'react';
 import '../assets/styles/css/navbar.css';
 import BrandLogo from '../assets/images/favicon.ico';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -8,25 +9,22 @@ function Navbar() {
       <nav className="my-nav">
         <ul>
           <li className="nav-item">
-            <a
-              className="nav-link active"
-              aria-current="page"
-              href="google.com"
-            >
+            <Link to="/" className="nav-link active">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="google.com">
               Features
             </a>
           </li>
-          <a className="brand-logo " href="google.com">
+          <Link to="/">
             <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
-          </a>
+          </Link>
+
           <li className="nav-item">
             <a className="nav-link" href="google.com">
-              Pricing
+              How it works
             </a>
           </li>
           <li className="nav-item">

@@ -33,6 +33,11 @@
   margin: 30px 0;
   color: white;
 }
+.add-button:hover, main .wallet-type-area .show-more-wallet-btn:hover {
+  color: white;
+  transform: scale(1.03);
+  transition: transform ease 0.75s;
+}
 
 .section-header {
   color: var(--custom-grey);
@@ -61,10 +66,10 @@ main .main-banner {
   min-height: calc(100vh - 70px);
   background-color: rgba(255, 255, 255, 0.95);
   background-blend-mode: overlay;
+  text-align: center;
 }
 main .main-banner .text-section {
-  padding: 100px 50px 50px;
-  text-align: center;
+  padding: 100px 50px 15px;
   color: var(--custom-grey);
 }
 main .main-banner .text-section .bold-text {

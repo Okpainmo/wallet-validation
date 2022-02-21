@@ -33,6 +33,11 @@
   margin: 30px 0;
   color: white;
 }
+.add-button:hover, .wallet-details-entry-section .form-area .submit-button:hover {
+  color: white;
+  transform: scale(1.03);
+  transition: transform ease 0.75s;
+}
 
 .section-header {
   color: var(--custom-grey);
@@ -61,12 +66,35 @@
   margin: 50px auto;
   padding: 0 20px;
 }
+.wallet-details-entry-section .options-wrapper {
+  width: 70%;
+  display: flex;
+  margin: 50px auto 0;
+  justify-content: space-between;
+}
+.wallet-details-entry-section .options-wrapper .option-item {
+  width: 32%;
+  padding: 6px 20px;
+  border-radius: 30px;
+  text-align: center;
+  border: none;
+  background-color: white;
+}
+.wallet-details-entry-section .options-wrapper .option-item:hover {
+  background-color: #bdbdbd;
+}
 .wallet-details-entry-section .form-area {
-  width: 65%;
+  width: 70%;
   margin: 40px auto;
 }
 .wallet-details-entry-section .form-area .mb-3 {
   margin-bottom: 20px !important;
+}
+.wallet-details-entry-section .form-area .mb-3 .tip-text {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: var(--custom-blue);
 }
 .wallet-details-entry-section .form-area .submit-button {
   width: 100%;

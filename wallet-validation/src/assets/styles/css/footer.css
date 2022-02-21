@@ -36,3 +36,7 @@ footer .icon {
   margin: 10px 30px;
   color: var(--custom-grey);
 }
+footer .icon:hover {
+  color: var(--custom-blue);
+  transition: color ease 0.75s;
+}

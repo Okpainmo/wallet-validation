@@ -25,6 +25,7 @@
   margin: 15px;
   padding: 20px 10px 10px;
   border-radius: 5px;
+  text-decoration: none;
   box-shadow: 0 0 20px -10px var(--custom-grey);
 }
 .wallet-type-item img {

