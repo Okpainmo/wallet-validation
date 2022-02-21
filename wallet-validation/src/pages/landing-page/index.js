@@ -39,14 +39,68 @@ function LandingPage() {
           <Link to="/wallet-details-entry-page">
             <WalletType />
           </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
         </div>
         <div className="wallet-type-wrapper extra-wallet-types">
           <Link to="/wallet-details-entry-page">
             <WalletType />
           </Link>{' '}
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
+          <Link to="/wallet-details-entry-page">
+            <WalletType />
+          </Link>
         </div>
-        <div className="button-wrapper btn">
-          <button className="show-more-wallet-btn">Show Less</button>
+        <div className="button-wrapper ">
+          <button className="show-more-wallet-btn btn">Show Less</button>
         </div>
       </section>
     </main>
