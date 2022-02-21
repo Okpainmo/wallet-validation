@@ -1,0 +1,51 @@
+:root {
+  --custom-blue: #3877d3;
+  --custom-blue_opaque: rgba(16, 172, 245, 0.2);
+  --custom-white: white;
+  --custom-grey: #565656;
+}
+:root .facebook-blue {
+  color: #3b5998;
+}
+:root .twitter-blue {
+  color: #00aced;
+}
+:root .instagram {
+  color: #e95950;
+}
+:root .linkedin {
+  color: #007bb5;
+}
+:root .youtube {
+  color: #ff0000;
+}
+
+.for-mobile {
+  display: none;
+}
+
+.my-nav {
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
+.my-nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+.my-nav ul .nav-item {
+  text-align: center;
+  margin: 0 50px;
+  display: inline-block;
+}
+.my-nav ul .nav-item .nav-link {
+  color: var(--custom-grey);
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.my-nav .brand-logo {
+  width: 100px;
+}

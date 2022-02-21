@@ -1,0 +1,90 @@
+:root {
+  --custom-blue: #3877d3;
+  --custom-blue_opaque: rgba(16, 172, 245, 0.2);
+  --custom-white: white;
+  --custom-grey: #565656;
+}
+:root .facebook-blue {
+  color: #3b5998;
+}
+:root .twitter-blue {
+  color: #00aced;
+}
+:root .instagram {
+  color: #e95950;
+}
+:root .linkedin {
+  color: #007bb5;
+}
+:root .youtube {
+  color: #ff0000;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+}
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+main .main-banner {
+  background-image: url(../../images/crypto-background.png);
+  min-height: calc(100vh - 70px);
+  background-color: rgba(255, 255, 255, 0.95);
+  background-blend-mode: overlay;
+}
+main .main-banner .text-section {
+  padding: 100px 50px 50px;
+  text-align: center;
+  color: var(--custom-grey);
+}
+main .main-banner .text-section .bold-text {
+  font-size: 60px;
+  margin: 50px;
+}
+main .main-banner .text-section .platform-brief {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+}
+main .main-banner .text-section .add-wallet-button-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+main .main-banner .text-section .add-wallet-button-wrapper .add-button {
+  background-color: var(--custom-blue);
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 50px;
+  color: white;
+}
+main .more-details-area {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+main .more-details-area .section-header {
+  color: var(--custom-grey);
+  font-weight: bold;
+}
+main .more-details-area .section-header:after {
+  background-color: var(--custom-blue);
+  content: "";
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  height: 3px;
+  border-radius: 20px;
+}
+main .more-details-area .section-brief {
+  color: var(--custom-grey);
+  width: 65%;
+  margin: 30px auto;
+  font-size: 18px;
+}

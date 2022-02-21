@@ -1,0 +1,30 @@
+@use './utilities/colors';
+
+.for-mobile {
+  display: none;
+}
+.my-nav {
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  ul {
+    display: flex;
+    justify-content: space-around;
+    .nav-item {
+      text-align: center;
+      margin: 0 50px;
+      display: inline-block;
+      .nav-link {
+        color: var(--custom-grey);
+        text-align: center;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+    }
+    padding: 0;
+    margin: 0;
+  }
+  .brand-logo {
+    width: 100px;
+  }
+}
