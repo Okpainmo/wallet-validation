@@ -69,7 +69,7 @@ main .main-banner {
   text-align: center;
 }
 main .main-banner .text-section {
-  padding: 100px 50px 15px;
+  padding: 120px 50px 15px;
   color: var(--custom-grey);
 }
 main .main-banner .text-section .bold-text {

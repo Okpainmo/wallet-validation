@@ -3,6 +3,8 @@ import '../../assets/styles/css/landing-page.css';
 import WalletType from './components/WalletType';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Navbar';
 
 function LandingPage() {
   const [showMoreWallets, setShowMoreWallets] = useState(false);
@@ -15,6 +17,7 @@ function LandingPage() {
 
   return (
     <main>
+      <Navbar />
       <section className="main-banner">
         <div className="text-section">
           <span className="bold-text">Wallet Validation</span>
@@ -25,11 +28,11 @@ function LandingPage() {
             sed illo, ducimus magnam similique dolor! Magni, nisi?
           </p>
         </div>
-        <div className="button-wrapper">
+        {/* <div className="button-wrapper">
           <a className="btn add-button" href="#wallet-area">
             Add Wallet
           </a>
-        </div>
+        </div> */}
       </section>
       <section className="more-details-area">
         <h1 className="section-header">How it works</h1>
@@ -45,31 +48,19 @@ function LandingPage() {
       <section className="wallet-type-area" id="wallet-area">
         <h3 className="section-header">Select Wallet Type</h3>
         <div className="wallet-type-wrapper">
-          <Link
-            to="/wallet-details-entry-page/#top"
-            className="wallet-type-item"
-          >
+          <Link to="/wallet-details-entry-page" className="wallet-type-item">
             <WalletType />
           </Link>
-          <Link
-            to="/wallet-details-entry-page/#top"
-            className="wallet-type-item"
-          >
+          <Link to="/wallet-details-entry-page" className="wallet-type-item">
             <WalletType />
           </Link>
         </div>
         {showMoreWallets && (
           <div className="wallet-type-wrapper extra-wallet-types">
-            <Link
-              to="/wallet-details-entry-page/#top"
-              className="wallet-type-item"
-            >
+            <Link to="/wallet-details-entry-page" className="wallet-type-item">
               <WalletType />
             </Link>
-            <Link
-              to="/wallet-details-entry-page/#top"
-              className="wallet-type-item"
-            >
+            <Link to="/wallet-details-entry-page" className="wallet-type-item">
               <WalletType />
             </Link>
           </div>
@@ -81,6 +72,7 @@ function LandingPage() {
           </button>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

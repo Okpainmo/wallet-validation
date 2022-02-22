@@ -1,14 +1,13 @@
 import LandingPage from './pages/landing-page';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Navbar from './components/Navbar';
+// import Footer from './components/Footer';
 import WalletDetailsEntryPage from './pages/wallet-details-entry-page';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route
@@ -37,7 +36,6 @@ function App() {
             }
           />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   );
