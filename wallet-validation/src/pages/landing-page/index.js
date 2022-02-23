@@ -34,11 +34,15 @@ function LandingPage() {
             sed illo, ducimus magnam similique dolor! Magni, nisi?
           </p>
         </div>
-        {/* <div className="button-wrapper">
-          <a className="btn add-button" href="#wallet-area">
+        <div className="button-wrapper">
+          <a
+            className="btn add-button"
+            style={{ fontSize: '20px' }}
+            href="#wallet-area"
+          >
             Add Wallet
           </a>
-        </div> */}
+        </div>
       </section>
       <section className="more-details-area">
         <h1 className="section-header">How it works</h1>

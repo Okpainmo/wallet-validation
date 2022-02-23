@@ -96,7 +96,7 @@ main .wallet-type-area .wallet-type-wrapper {
   width: 100%;
   padding: 20px 50px 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 main .wallet-type-area .show-more-wallet-btn {

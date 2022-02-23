@@ -16,7 +16,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="google.com">
-              Features
+              About
             </a>
           </li>
           <Link to="/">
@@ -30,7 +30,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="google.com">
-              Pricing
+              Contact
             </a>
           </li>
         </ul>
@@ -64,18 +64,18 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="google.com">
-                  Features
+                  About
                 </a>
               </li>
 
               <li className="nav-item">
                 <a className="nav-link" href="google.com">
-                  Pricing
+                  How it works
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="google.com">
-                  Pricing
+                  Contact
                 </a>
               </li>
             </ul>
