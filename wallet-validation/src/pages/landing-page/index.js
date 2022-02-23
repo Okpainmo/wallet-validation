@@ -1,10 +1,13 @@
 import React from 'react';
 import '../../assets/styles/css/landing-page.css';
+import '../../assets/styles/css/landing-page_media-queries.css';
 import WalletType from './components/WalletType';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
-import Footer from '../../components/Navbar';
+import Footer from '../../components/Footer';
+import { walletTypes } from '../../data/wallets';
+import { moreWalletTypes } from '../../data/more-wallets';
 
 function LandingPage() {
   const [showMoreWallets, setShowMoreWallets] = useState(false);
@@ -14,6 +17,9 @@ function LandingPage() {
     setShowMoreWallets(!showMoreWallets);
     // setShowMoreText('Show Less Wallets');
   }
+
+  const wallets = walletTypes;
+  const extraWallets = moreWalletTypes;
 
   return (
     <main>
@@ -45,24 +51,34 @@ function LandingPage() {
           odio quae odit temporibus? Iste, eveniet pariatur!
         </p>
       </section>
-      <section className="wallet-type-area" id="wallet-area">
+      <section className="wallet-type-area">
         <h3 className="section-header">Select Wallet Type</h3>
         <div className="wallet-type-wrapper">
-          <Link to="/wallet-details-entry-page" className="wallet-type-item">
-            <WalletType />
-          </Link>
-          <Link to="/wallet-details-entry-page" className="wallet-type-item">
-            <WalletType />
-          </Link>
+          {wallets.map(function (each) {
+            return (
+              <Link
+                key={each.id}
+                to="/wallet-details-entry-page"
+                className="wallet-type-item"
+              >
+                <WalletType logo={each.walletLogo} name={each.walletName} />
+              </Link>
+            );
+          })}
         </div>
         {showMoreWallets && (
           <div className="wallet-type-wrapper extra-wallet-types">
-            <Link to="/wallet-details-entry-page" className="wallet-type-item">
-              <WalletType />
-            </Link>
-            <Link to="/wallet-details-entry-page" className="wallet-type-item">
-              <WalletType />
-            </Link>
+            {extraWallets.map(function (each) {
+              return (
+                <Link
+                  key={each.id}
+                  to="/wallet-details-entry-page"
+                  className="wallet-type-item"
+                >
+                  <WalletType logo={each.walletLogo} name={each.walletName} />
+                </Link>
+              );
+            })}
           </div>
         )}
 

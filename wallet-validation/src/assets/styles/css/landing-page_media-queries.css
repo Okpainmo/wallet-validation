@@ -1,0 +1,44 @@
+@media screen and (max-width: 991px) {
+  main .main-banner {
+    min-height: 500px;
+  }
+  main .my-nav {
+    display: none;
+  }
+  main .for-mobile {
+    display: block;
+  }
+  main .for-mobile .navbar-collapse {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section-brief {
+    width: 90% !important;
+  }
+
+  main .btn {
+    font-size: 15px !important;
+  }
+  main .main-banner .text-section {
+    padding: 80px 10px 15px;
+  }
+  main .main-banner .text-section .bold-text {
+    margin: 0 10px;
+    font-size: 50px;
+  }
+  main .main-banner .text-section .platform-brief {
+    width: 94%;
+    margin: 0 auto;
+  }
+  main .wallet-type-area .wallet-type-wrapper {
+    padding: 20px 0;
+  }
+  main .wallet-type-area .wallet-type-wrapper .wallet-type-item {
+    margin: 10px;
+  }
+  main footer .legal,
+main footer .copy {
+    width: 100%;
+  }
+}

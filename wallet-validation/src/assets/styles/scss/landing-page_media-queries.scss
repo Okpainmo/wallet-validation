@@ -1,0 +1,54 @@
+@media screen and (max-width: 991px) {
+  main {
+    .main-banner {
+      min-height: 500px;
+    }
+    .my-nav {
+      display: none;
+    }
+    .for-mobile {
+      display: block;
+      .navbar-collapse {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .section-brief {
+    width: 90% !important;
+  }
+  main {
+    .btn {
+      font-size: 15px !important;
+    }
+    .main-banner {
+      .text-section {
+        padding: 80px 10px 15px;
+        .bold-text {
+          margin: 0 10px;
+          font-size: 50px;
+        }
+        .platform-brief {
+          width: 94%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .wallet-type-area {
+      .wallet-type-wrapper {
+        padding: 20px 0;
+        .wallet-type-item {
+          margin: 10px;
+        }
+      }
+    }
+    footer {
+      .legal,
+      .copy {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -37,9 +37,9 @@ function Navbar() {
       </nav>
       <nav className="navbar navbar-expand-lg navbar-light for-mobile">
         <div className="container-fluid">
-          <a className="brand-logo " href="google.com">
+          <Link to="/">
             <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

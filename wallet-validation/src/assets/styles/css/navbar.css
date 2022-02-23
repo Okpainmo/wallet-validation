@@ -20,6 +20,10 @@
   color: #ff0000;
 }
 
+.brand-logo {
+  width: 100px;
+}
+
 .for-mobile {
   display: none;
 }
@@ -48,7 +52,4 @@
 }
 .my-nav ul .nav-item .nav-link:hover {
   border-bottom: 2px solid var(--custom-blue);
-}
-.my-nav .brand-logo {
-  width: 100px;
 }

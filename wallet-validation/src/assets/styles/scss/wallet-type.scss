@@ -1,17 +1,25 @@
 @use './utilities/colors';
 
 .wallet-type-item {
-  width: 80px;
+  width: 90px;
   margin: 15px;
   padding: 20px 10px 10px;
   border-radius: 5px;
   text-decoration: none;
   box-shadow: 0 0 20px -10px var(--custom-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &:hover {
+    transform: scale(1.05);
+    transition: transform ease 0.75s;
+  }
   img {
     width: calc(100% - 10px);
   }
   .wallet-name {
     margin: 15px 0 5px;
+    font-size: 12px;
     color: var(--custom-grey);
   }
 }

