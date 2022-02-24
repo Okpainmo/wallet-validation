@@ -40,203 +40,203 @@ import logo39 from '../assets/images/extra-wallet-icons/trustvault.png';
 
 export const moreWalletTypes = [
   {
-    id: 1,
+    id: 'Nano',
     walletLogo: logo1,
     walletName: 'Nano',
   },
   {
-    id: 2,
+    id: 'TomoChain',
     walletLogo: logo2,
     walletName: 'Tomo Chain',
   },
   {
-    id: 3,
+    id: 'IoTex',
     walletLogo: logo3,
     walletName: 'IoTex',
   },
   {
-    id: 4,
+    id: 'Wanchain',
     walletLogo: logo4,
     walletName: 'Wanchain',
   },
   {
-    id: 5,
+    id: 'Kin',
     walletLogo: logo5,
     walletName: 'Kin',
   },
 
   {
-    id: 6,
+    id: 'Nimiq',
     walletLogo: logo6,
     walletName: 'Nimiq',
   },
   {
-    id: 7,
+    id: 'Aion',
     walletLogo: logo7,
     walletName: 'Aion',
   },
   {
-    id: 8,
+    id: 'ThunderToken',
     walletLogo: logo8,
     walletName: 'Thunder Token',
   },
   {
-    id: 9,
+    id: 'Aeternity',
     walletLogo: logo9,
     walletName: 'Aeternity',
   },
   {
-    id: 10,
+    id: 'Nebulas',
     walletLogo: logo10,
     walletName: 'Nebulas',
   },
 
   {
-    id: 11,
+    id: 'FIO',
     walletLogo: logo11,
     walletName: ' FIO',
   },
   {
-    id: 12,
+    id: 'GoChain',
     walletLogo: logo12,
     walletName: 'GoChain',
   },
   {
-    id: 13,
+    id: 'POANetwork',
     walletLogo: logo13,
     walletName: 'POA Network',
   },
   {
-    id: 14,
+    id: 'Callisto',
     walletLogo: logo14,
     walletName: 'Callisto',
   },
   {
-    id: 15,
+    id: 'BitPay',
     walletLogo: logo15,
     walletName: 'BitPay',
   },
 
   {
-    id: 16,
+    id: 'Aktionariat',
     walletLogo: logo16,
     walletName: 'Aktionariat',
   },
   {
-    id: 17,
+    id: 'AtWallet',
     walletLogo: logo17,
     walletName: 'AtWallet',
   },
   {
-    id: 18,
+    id: 'GuardWallet',
     walletLogo: logo18,
     walletName: 'Guard Wallet',
   },
   {
-    id: 19,
+    id: 'AAVE',
     walletLogo: logo19,
     walletName: 'AAVE',
   },
   {
-    id: 20,
+    id: 'Exodus',
     walletLogo: logo20,
     walletName: 'Exodus',
   },
 
   {
-    id: 21,
+    id: 'Enjin',
     walletLogo: logo21,
-    walletName: ' Enjin',
+    walletName: 'Enjin',
   },
   {
-    id: 22,
+    id: 'Skale',
     walletLogo: logo22,
     walletName: 'Skale',
   },
   {
-    id: 23,
+    id: 'Portis',
     walletLogo: logo23,
     walletName: 'Portis',
   },
   {
-    id: 24,
+    id: 'Trezor',
     walletLogo: logo24,
     walletName: 'Trezor',
   },
   {
-    id: 25,
+    id: 'Squarelink',
     walletLogo: logo25,
     walletName: 'Squarelink',
   },
 
   {
-    id: 26,
+    id: 'Torus',
     walletLogo: logo26,
     walletName: 'Torus',
   },
   {
-    id: 27,
+    id: 'VeChain',
     walletLogo: logo27,
     walletName: 'VeChain',
   },
   {
-    id: 28,
+    id: 'ScatterWallet',
     walletLogo: logo28,
     walletName: 'Scatter Wallet',
   },
   {
-    id: 29,
+    id: 'MathWallet',
     walletLogo: logo29,
     walletName: 'Math Wallet',
   },
   {
-    id: 30,
+    id: 'FortMatic',
     walletLogo: logo30,
     walletName: 'FortMatic',
   },
 
   {
-    id: 31,
+    id: 'Digitex',
     walletLogo: logo31,
     walletName: 'Digitex',
   },
   {
-    id: 32,
+    id: 'Ledger',
     walletLogo: logo32,
     walletName: 'Ledger',
   },
   {
-    id: 33,
+    id: 'Defiat',
     walletLogo: logo33,
     walletName: 'Defiat',
   },
   {
-    id: 34,
+    id: 'Authereum',
     walletLogo: logo34,
     walletName: 'Authereum',
   },
   {
-    id: 35,
+    id: 'FlareWallet',
     walletLogo: logo35,
     walletName: 'Flare Wallet',
   },
   {
-    id: 36,
+    id: 'Zelcore',
     walletLogo: logo36,
     walletName: 'Zelcore',
   },
   {
-    id: 37,
+    id: 'BitKeep',
     walletLogo: logo37,
     walletName: 'BitKeep',
   },
   {
-    id: 38,
+    id: 'Coin98',
     walletLogo: logo38,
     walletName: 'Coin98',
   },
   {
-    id: 39,
+    id: 'TrustVault',
     walletLogo: logo39,
     walletName: 'Trust Vault',
   },

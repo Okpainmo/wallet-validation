@@ -61,6 +61,10 @@
   font-size: 18px;
 }
 
+body {
+  font-family: "Nunito", sans-serif;
+}
+
 main .main-banner {
   background-image: url(../../images/crypto-background.png);
   min-height: calc(100vh - 70px);

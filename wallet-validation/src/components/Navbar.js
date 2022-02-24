@@ -2,7 +2,6 @@ import React from 'react';
 import '../assets/styles/css/navbar.css';
 import BrandLogo from '../assets/images/favicon.ico';
 import { Link } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -10,7 +9,7 @@ function Navbar() {
       <nav className="my-nav">
         <ul>
           <li className="nav-item">
-            <Link to="/" className="nav-link active">
+            <Link to="/Testing" className="nav-link active">
               Home
             </Link>
           </li>
@@ -82,7 +81,6 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <Outlet />
     </>
   );
 }

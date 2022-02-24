@@ -8,6 +8,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { walletTypes } from '../../data/wallets';
 import { moreWalletTypes } from '../../data/more-wallets';
+import { Outlet } from 'react-router-dom';
 
 function LandingPage() {
   const [showMoreWallets, setShowMoreWallets] = useState(false);
@@ -38,7 +39,7 @@ function LandingPage() {
           <a
             className="btn add-button"
             style={{ fontSize: '20px' }}
-            href="#wallet-area"
+            href="#wallets-area"
           >
             Add Wallet
           </a>
@@ -55,7 +56,7 @@ function LandingPage() {
           odio quae odit temporibus? Iste, eveniet pariatur!
         </p>
       </section>
-      <section className="wallet-type-area">
+      <section className="wallet-type-area" id="wallets-area">
         <h3 className="section-header">Select Wallet Type</h3>
         <div className="wallet-type-wrapper">
           {wallets.map(function (each) {
@@ -92,6 +93,7 @@ function LandingPage() {
           </button>
         </div>
       </section>
+      <Outlet />
       <Footer />
     </main>
   );
