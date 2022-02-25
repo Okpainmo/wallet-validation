@@ -65,6 +65,85 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+.brand-logo {
+  width: 100px;
+}
+
+.for-mobile {
+  display: none;
+}
+
+.my-nav {
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
+.my-nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+.my-nav ul .nav-item {
+  text-align: center;
+  margin: 0 50px;
+  display: inline-block;
+}
+.my-nav ul .nav-item .nav-link {
+  color: var(--custom-grey);
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.my-nav ul .nav-item .nav-link:hover {
+  border-bottom: 2px solid var(--custom-blue);
+}
+
+footer {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+}
+footer .legal,
+footer .copy {
+  width: 80%;
+  margin: 20px auto;
+  color: var(--custom-grey);
+}
+footer .icon {
+  font-size: 20px;
+  margin: 10px 30px;
+  color: var(--custom-grey);
+}
+footer .icon:hover {
+  color: var(--custom-blue);
+  transition: color ease 0.75s;
+}
+
+.wallet-type-item {
+  width: 90px;
+  margin: 15px;
+  padding: 20px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 20px -10px var(--custom-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wallet-type-item:hover {
+  transform: scale(1.05);
+  transition: transform ease 0.75s;
+}
+.wallet-type-item img {
+  width: calc(100% - 10px);
+}
+.wallet-type-item .wallet-name {
+  margin: 15px 0 5px;
+  font-size: 12px;
+  color: var(--custom-grey);
+}
+
 main .main-banner {
   background-image: url(../../images/crypto-background.png);
   min-height: calc(100vh - 70px);

@@ -61,6 +61,65 @@
   font-size: 18px;
 }
 
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.brand-logo {
+  width: 100px;
+}
+
+.for-mobile {
+  display: none;
+}
+
+.my-nav {
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+}
+.my-nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+.my-nav ul .nav-item {
+  text-align: center;
+  margin: 0 50px;
+  display: inline-block;
+}
+.my-nav ul .nav-item .nav-link {
+  color: var(--custom-grey);
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.my-nav ul .nav-item .nav-link:hover {
+  border-bottom: 2px solid var(--custom-blue);
+}
+
+footer {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+}
+footer .legal,
+footer .copy {
+  width: 80%;
+  margin: 20px auto;
+  color: var(--custom-grey);
+}
+footer .icon {
+  font-size: 20px;
+  margin: 10px 30px;
+  color: var(--custom-grey);
+}
+footer .icon:hover {
+  color: var(--custom-blue);
+  transition: color ease 0.75s;
+}
+
 .wallet-details-entry-section {
   width: 100%;
   margin: 50px auto;

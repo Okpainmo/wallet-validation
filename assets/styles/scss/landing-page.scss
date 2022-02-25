@@ -1,6 +1,9 @@
 @use './utilities/colors';
 @use './utilities/config';
 @use './utilities/google-fonts';
+@use './components/navbar';
+@use './components/footer';
+@use './components/wallet-type';
 
 main {
   .main-banner {

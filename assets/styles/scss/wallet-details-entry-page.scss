@@ -1,5 +1,8 @@
 @use './utilities/colors';
 @use './utilities/config';
+@use './utilities/google-fonts';
+@use './components/navbar';
+@use './components/footer';
 
 .wallet-details-entry-section {
   width: 100%;

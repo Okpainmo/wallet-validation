@@ -1,0 +1,25 @@
+{
+  "name": "wallet-validation",
+  "version": "1.0.0",
+  "description": "A platform that help users supply their crypto wallet details.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Okpainmo/wallet-validation.git"
+  },
+  "author": "",
+  "license": "nil",
+  "bugs": {
+    "url": "https://github.com/Okpainmo/wallet-validation/issues"
+  },
+  "homepage": "https://github.com/Okpainmo/wallet-validation#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
+  }
+}
