@@ -9,28 +9,28 @@ function Navbar() {
       <nav className="my-nav">
         <ul>
           <li className="nav-item">
-            <Link to="/Testing" className="nav-link active">
+            <Link to="/" className="nav-link">
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="google.com">
+            <Link to="/" className="nav-link">
               About
-            </a>
+            </Link>
           </li>
           <Link to="/">
             <img src={BrandLogo} alt="brand-logo" className="brand-logo" />
           </Link>
 
           <li className="nav-item">
-            <a className="nav-link" href="google.com">
+            <Link to="/" className="nav-link">
               How it works
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="google.com">
-              Contact
-            </a>
+            <Link to="/" className="nav-link">
+              Pricing
+            </Link>
           </li>
         </ul>
       </nav>
@@ -53,29 +53,24 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="google.com"
-                >
+                <Link to="/" className="nav-link " aria-current="page">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="google.com">
+                <Link to="/" className="nav-link">
                   About
-                </a>
+                </Link>
               </li>
-
               <li className="nav-item">
-                <a className="nav-link" href="google.com">
+                <Link to="/" className="nav-link">
                   How it works
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="google.com">
-                  Contact
-                </a>
+                <Link to="/" className="nav-link">
+                  Pricing
+                </Link>
               </li>
             </ul>
           </div>

