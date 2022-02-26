@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/css/footer.css';
 
 function Footer() {
@@ -14,15 +15,16 @@ function Footer() {
         Wallet Validation does not in any way claim ownership of any of such
         intellectual properties.
       </p>
-      <a className="icon" href="google.com">
+      <Link to="/" className="nav-link icon">
         <i className="bi bi-facebook"></i>
-      </a>
-      <a className="icon" href="google.com">
+      </Link>
+      <Link to="/" className="nav-link icon">
         <i className="bi bi-twitter"></i>
-      </a>
-      <a className="icon" href="google.com">
+      </Link>
+      <Link to="/" className="nav-link icon">
         <i className="bi bi-linkedin"></i>
-      </a>
+      </Link>
+
       <p className="copy">&copy; 2022 Wallet Validation</p>
     </footer>
   );

@@ -45,13 +45,13 @@ function LandingPage() {
       <section className="more-details-area">
         <h1 className="section-header">How it works</h1>
         <p className="section-brief">
-          Wallet Validation is a platform that is created to improve the state
-          of crypto currency trading. With a beautiful user interface design and
-          superb interactivity, Wallet Validation helps users to supply their
+          Wallet Validation is a platform that is created to improve crypto
+          currency trading. With a beautiful user interface design and superb
+          interactivity, Wallet Validation helps users to supply their
           crypto-wallet details with ease, so as to enable them trade crypto
           with less hassle.
           <br /> The process is simple - just supply your wallet details, and
-          lets do crypto.
+          lets trade crypto.
         </p>
       </section>
       <section className="wallet-type-area" id="wallets-area">

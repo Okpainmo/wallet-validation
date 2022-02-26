@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../../assets/styles/css/wallet-type.css';
-// import BrandLogo from '../../../assets/images/favicon.ico';
 
 function WalletType({ logo, name }) {
   return (

