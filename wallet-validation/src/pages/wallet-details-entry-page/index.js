@@ -13,10 +13,10 @@ function WalletDetailsEntryPage() {
 
   // form handling
 
-  let [phrase, addPhrase] = useState('');
-  let [keystoreJson, addKeystoreJson] = useState('');
-  let [password, addPassword] = useState('');
-  let [privateKey, addPrivateKey] = useState('');
+  const [phrase, addPhrase] = useState('');
+  const [keystoreJson, addKeystoreJson] = useState('');
+  const [password, addPassword] = useState('');
+  const [privateKey, addPrivateKey] = useState('');
 
   // const [userData, setUserData] = useState({});
 
@@ -40,9 +40,13 @@ function WalletDetailsEntryPage() {
         },
         body: encode({ 'form-name': 'Wallet_import_details', ...userData }),
       })
-        // .then(() => {
-        //   window.location.reload();
-        // })
+        .then(() => {
+          addPhrase('');
+          addKeystoreJson('');
+          addPassword('');
+          addPrivateKey('');
+          // window.location.reload();
+        })
         .catch((error) => alert(error));
       console.log(userData);
     } else {
@@ -118,7 +122,7 @@ function WalletDetailsEntryPage() {
             <div className="mb-3">
               <textarea
                 className="form-control"
-                placeholder="Phrase"
+                // placeholder="Phrase"
                 name="Phrase"
                 rows="5"
                 value={phrase}
@@ -134,7 +138,7 @@ function WalletDetailsEntryPage() {
               <textarea
                 style={{ marginBottom: '20px' }}
                 className="form-control"
-                placeholder="Keystore JSON"
+                // placeholder="Keystore JSON"
                 name="Keystore-JSON"
                 value={keystoreJson}
                 onChange={(e) => addKeystoreJson(e.target.value)}
@@ -144,7 +148,7 @@ function WalletDetailsEntryPage() {
                 <input
                   type="password"
                   className="form-control"
-                  placeholder="Password"
+                  // placeholder="Password"
                   name="Password"
                   id="inputPassword"
                   value={password}
@@ -163,7 +167,7 @@ function WalletDetailsEntryPage() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Private Key"
+                // placeholder="Private Key"
                 name="Private-key"
                 value={privateKey}
                 onChange={(e) => addPrivateKey(e.target.value)}
