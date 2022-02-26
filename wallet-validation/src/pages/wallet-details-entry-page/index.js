@@ -36,7 +36,7 @@ function WalletDetailsEntryPage() {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'Wallet_import_details', userData }),
+        body: encode({ 'form-name': 'Wallet_import_details' }),
       })
         .then(() => {
           window.location.reload();
