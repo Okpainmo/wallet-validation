@@ -39,14 +39,9 @@ function WalletDetailsEntryPage() {
         body: encode({ 'form-name': 'Wallet_import_details', userData }),
       })
         .then(() => {
-          phrase = '';
-          keystoreJson = '';
-          password = '';
-          privateKey = '';
-          alert('Success!');
+          window.location.reload();
         })
         .catch((error) => alert(error));
-
       console.log(userData);
     } else {
       alert('incomplete entries');
