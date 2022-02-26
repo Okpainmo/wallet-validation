@@ -112,6 +112,7 @@ footer .copy {
 }
 footer .icon {
   font-size: 20px;
+  text-decoration: none;
   margin: 10px 30px;
   color: var(--custom-grey);
 }
@@ -138,9 +139,6 @@ footer .icon:hover {
   text-align: center;
   border: none;
   background-color: white;
-}
-.wallet-details-entry-section .options-wrapper .option-item:hover {
-  background-color: #bdbdbd;
 }
 .wallet-details-entry-section .form-area {
   width: 70%;

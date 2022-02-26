@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simply beautiful platform that enables users to submit their crypto account details"
+    />
 
     <!-- bootstrap styles CDN -->
 
@@ -30,7 +34,7 @@
       rel="stylesheet"
     />
 
-    <!-- styles -->
+    <!-- custom styles -->
 
     <link rel="stylesheet" href="./assets/styles/css/landing-page.css" />
     <link
@@ -39,7 +43,8 @@
     />
 
     <title>
-      Wallet Validation - Submit your crypto account details with ease
+      Wallet Validation - Submit your crypto account details and let's trade
+      crypto.
     </title>
   </head>
   <body>
@@ -47,26 +52,34 @@
       <nav class="my-nav">
         <ul>
           <li class="nav-item">
-            <a href="#">Home</a>
+            <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#">About</a>
+            <a class="nav-link" href="#">About</a>
           </li>
-          <a href="#"> <img src="" alt="brand-logo" class="brand-logo" /></a>
+          <a class="nav-link" href="#">
+            <img
+              src="./assets/images/favicon.ico"
+              alt="brand-logo"
+              class="brand-logo"
+          /></a>
 
           <li class="nav-item">
-            <a href="#">How it works</a>
+            <a class="nav-link" href="#">How it works</a>
           </li>
           <li class="nav-item">
-            <a href="#">Pricing</a>
+            <a class="nav-link" href="#">Pricing</a>
           </li>
         </ul>
       </nav>
       <nav class="navbar navbar-expand-lg navbar-light for-mobile">
         <div class="container-fluid">
-          <a href="#"></a>
-          <img src="" alt="brand-logo" class="brand-logo" />
-
+          <a class="nav-link" style="padding: 0" href="#"
+            ><img
+              src="./assets/images/favicon.ico"
+              alt="brand-logo"
+              class="brand-logo"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -81,16 +94,16 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a href="#">Home</a>
+                <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a href="#">About</a>
+                <a class="nav-link" href="#">About</a>
               </li>
               <li class="nav-item">
-                <a href="#">How it works</a>
+                <a class="nav-link" href="#">How it works</a>
               </li>
               <li class="nav-item">
-                <a href="#"> Pricing</a>
+                <a class="nav-link" href="#"> Pricing</a>
               </li>
             </ul>
           </div>
@@ -129,23 +142,27 @@
       <section class="wallet-type-area" id="wallets-area">
         <h3 class="section-header">Select Wallet Type</h3>
         <div class="wallet-type-wrapper">
-          <a href="#" class="wallet-type-item">
-            <div className="wallet-type-logo">
-              <img src="{logo}" alt="wallet-type-logo" />
+          <a
+            href="./pages/wallet-details-entry-page.html"
+            class="wallet-type-item"
+          >
+            <div class="wallet-type-logo">
+              <img src="" alt="wallet-type-logo" id="walletTypeLogo" />
             </div>
-            <div className="wallet-name">{name}</div>
+            <div class="wallet-name" id="walletTypeName"></div>
           </a>
         </div>
         <div class="wallet-type-wrapper extra-wallet-types">
           <a href="#" class="wallet-type-item">
-            <WalletType logo="{each.walletLogo}" name="{each.walletName}" />
+            <div class="wallet-type-logo">
+              <img src="" alt="wallet-type-logo" id="extraWalletTypeLogo" />
+            </div>
+            <div class="wallet-name" id="extraWalletTypeName"></div>
           </a>
         </div>
 
         <div class="button-wrapper" onClick="{displayMoreWallets}">
-          <button class="show-more-wallet-btn btn">
-            {showMoreWallets ? ' Show Less Wallets' : 'Show More Wallets'}
-          </button>
+          <button class="show-more-wallet-btn btn">Show More Wallets</button>
         </div>
       </section>
       <footer class="bg-light">
@@ -155,7 +172,7 @@
           crypto currency by providing a sleek platform for users to supply
           their crypto-wallet details with more ease. <br />
           <strong>Disclaimer:</strong> All logo and brand identities used in
-          this app, are intellectual properties of their respective owners.
+          this website, are intellectual properties of their respective owners.
           <br />
           Wallet Validation does not in any way claim ownership of any of such
           intellectual properties.
@@ -172,5 +189,25 @@
         <p class="copy">&copy; 2022 Wallet Validation</p>
       </footer>
     </main>
+
+    <!-- Bootstrap js CDN -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- custom scripts -->
+
+    <script type="module" src="./assets/data/wallets.js"></script>
+    <script type="module" src="./assets/data/more-wallets.js"></script>
+    <script type="module" src="./assets/scripts/data-mapping.js"></script>
   </body>
 </html>

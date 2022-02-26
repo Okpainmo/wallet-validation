@@ -1,7 +1,7 @@
 {
   "name": "wallet-validation",
   "version": "1.0.0",
-  "description": "A platform that help users supply their crypto wallet details.",
+  "description": "A simply beautiful platform that enables users to submit their crypto account details",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
