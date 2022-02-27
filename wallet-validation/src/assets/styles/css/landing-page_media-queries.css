@@ -1,6 +1,9 @@
 @media screen and (max-width: 991px) {
   main .main-banner {
-    min-height: 600px;
+    min-height: 450px;
+  }
+  main .main-banner .lead-banner-image {
+    padding: 20px 30px;
   }
   main .my-nav {
     display: none;
@@ -18,10 +21,10 @@
   }
 
   main .btn {
-    font-size: 15px !important;
+    font-size: 18px !important;
   }
   main .main-banner .text-section {
-    padding: 80px 10px 15px;
+    padding: 60px 10px 15px;
   }
   main .main-banner .text-section .bold-text {
     margin: 0 10px;
@@ -30,6 +33,9 @@
   main .main-banner .text-section .platform-brief {
     width: 94%;
     margin: 0 auto;
+  }
+  main .main-banner .lead-banner-image {
+    padding: 20px 15px 40px;
   }
   main .wallet-type-area .wallet-type-wrapper {
     padding: 20px;
@@ -40,5 +46,10 @@
   main footer .legal,
 main footer .copy {
     width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .btn {
+    padding: 10px 50px !important;
   }
 }

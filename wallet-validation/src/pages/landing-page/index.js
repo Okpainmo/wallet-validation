@@ -8,7 +8,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { walletTypes } from '../../data/wallets';
 import { moreWalletTypes } from '../../data/more-wallets';
-import { Outlet } from 'react-router-dom';
+import connectProtocol from '../../assets/images/connect-protocol.jpeg';
 
 function LandingPage() {
   const [showMoreWallets, setShowMoreWallets] = useState(false);
@@ -29,13 +29,21 @@ function LandingPage() {
         <div className="text-section">
           <span className="bold-text">Wallet Validation</span>
           <p className="platform-brief">
-            A simple app for collecting user crypto-wallet details.
+            Open protocol for connecting Wallets to Dapps.
           </p>
+        </div>
+
+        <div className="lead-banner-image">
+          <img
+            style={{ width: '100%' }}
+            src={connectProtocol}
+            alt="Dapps connect"
+          />
         </div>
         <div className="button-wrapper">
           <a
             className="btn add-button"
-            style={{ fontSize: '20px' }}
+            style={{ fontSize: '20px', padding: '10px 100px' }}
             href="#wallets-area"
           >
             Add Wallet
@@ -91,7 +99,6 @@ function LandingPage() {
           </button>
         </div>
       </section>
-      <Outlet />
       <Footer />
     </main>
   );

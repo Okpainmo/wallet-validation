@@ -1,7 +1,10 @@
 @media screen and (max-width: 991px) {
   main {
     .main-banner {
-      min-height: 600px;
+      min-height: 450px;
+      .lead-banner-image {
+        padding: 20px 30px;
+      }
     }
     .my-nav {
       display: none;
@@ -21,11 +24,12 @@
   }
   main {
     .btn {
-      font-size: 15px !important;
+      font-size: 18px !important;
+      // padding: 10px 70px !important;
     }
     .main-banner {
       .text-section {
-        padding: 80px 10px 15px;
+        padding: 60px 10px 15px;
         .bold-text {
           margin: 0 10px;
           font-size: 50px;
@@ -34,6 +38,9 @@
           width: 94%;
           margin: 0 auto;
         }
+      }
+      .lead-banner-image {
+        padding: 20px 15px 40px;
       }
     }
     .wallet-type-area {
@@ -49,6 +56,13 @@
       .copy {
         width: 100%;
       }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  main {
+    .btn {
+      padding: 10px 50px !important;
     }
   }
 }
