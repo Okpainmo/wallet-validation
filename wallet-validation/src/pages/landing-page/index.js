@@ -32,22 +32,12 @@ function LandingPage() {
             Open protocol for connecting Wallets to Dapps.
           </p>
         </div>
-
         <div className="lead-banner-image">
           <img
             style={{ width: '100%' }}
             src={connectProtocol}
             alt="Dapps connect"
           />
-        </div>
-        <div className="button-wrapper">
-          <a
-            className="btn add-button"
-            style={{ fontSize: '20px', padding: '10px 100px' }}
-            href="#wallets-area"
-          >
-            Add Wallet
-          </a>
         </div>
       </section>
       <section className="more-details-area">

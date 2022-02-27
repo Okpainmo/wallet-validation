@@ -20,9 +20,10 @@
     width: 90% !important;
   }
 
-  main .btn {
+  .btn {
     font-size: 18px !important;
   }
+
   main .main-banner .text-section {
     padding: 60px 10px 15px;
   }
